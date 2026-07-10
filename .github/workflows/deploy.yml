@@ -24,6 +24,7 @@ jobs:
           protocol: ftps
           server-dir: domains/autogrado.com.br/public_html/
           local-dir: ./
+          dangerous-clean-slate: true
           # Nao envia arquivos internos do repositorio pro servidor:
           exclude: |
             **/.git*
