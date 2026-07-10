@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           protocol: ftps
-          server-dir: public_html/
+          server-dir: domains/autogrado.com.br/public_html/
           local-dir: ./
           # Nao envia arquivos internos do repositorio pro servidor:
           exclude: |
