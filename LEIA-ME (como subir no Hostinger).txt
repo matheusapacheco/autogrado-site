@@ -1,0 +1,53 @@
+===========================================================
+SITE AUTOGRADO — COMO SUBIR NO HOSTINGER
+===========================================================
+
+O QUE É ESTA PASTA
+------------------
+É o site pronto pra publicar. Tudo aqui dentro deve ir pro servidor.
+NÃO falta nada e NÃO sobra nada: o arquivo de aprovação, os backups e
+os temporários já foram deixados de fora de propósito.
+
+Conteúdo:
+  index.html ................. página principal do site
+  termos-de-uso.html ......... página de Termos de Uso
+  politica-de-privacidade.html  página de Política de Privacidade
+  .htaccess .................. configuração do servidor (HTTPS, cache, compressão)
+  assets/ .................... imagens, vídeos, fontes e logos do site
+
+
+PASSO A PASSO (pelo painel do Hostinger)
+----------------------------------------
+1. Entre no hPanel do Hostinger.
+2. Abra "Sites" > seu site > "Gerenciador de Arquivos".
+3. Entre na pasta "public_html".
+4. Apague os arquivos que já vierem lá dentro por padrão
+   (ex.: "default.php" ou um "index.html" de exemplo do Hostinger).
+5. Envie TODO o conteúdo desta pasta para dentro de "public_html":
+   - o index.html, as duas páginas .html, o .htaccess
+   - e a pasta assets inteira.
+   IMPORTANTE: o index.html tem que ficar direto em public_html
+   (não crie uma subpasta; o conteúdo é que vai pra dentro de public_html).
+6. Dica: para ir mais rápido, você pode compactar esta pasta em .zip,
+   enviar o .zip e usar "Extrair" no próprio Gerenciador de Arquivos.
+
+
+DEPOIS DE SUBIR
+---------------
+1. Ative o SSL grátis (HTTPS): hPanel > "Segurança" > "SSL".
+   O Hostinger costuma ativar sozinho; se não, ative manualmente.
+   (O .htaccess já redireciona tudo pra https automaticamente.)
+2. Abra o site no navegador e confira:
+   - as imagens e o vídeo do topo aparecem;
+   - os links de Termos e Política funcionam no rodapé.
+
+
+OBSERVAÇÕES
+-----------
+- O arquivo ".htaccess" começa com ponto e pode ficar "escondido".
+  No Gerenciador de Arquivos do Hostinger, ative "Mostrar arquivos ocultos"
+  (ícone de engrenagem/configurações) para vê-lo e ter certeza que subiu.
+- O vídeo do topo tem duas versões (celular e computador); o site troca
+  sozinho conforme o aparelho. Não precisa fazer nada.
+- Se algum dia trocar uma imagem, suba com o MESMO nome (tudo minúsculo)
+  e na mesma pasta, pra não quebrar o site.

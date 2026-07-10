@@ -1,0 +1,41 @@
+# ============================================================
+# Autogrado - configuracao de servidor (Hostinger / Apache-LiteSpeed)
+# ============================================================
+
+# --- Pagina inicial ---
+DirectoryIndex index.html
+
+# --- Forcar HTTPS (ative o SSL gratuito no Hostinger antes) ---
+# Se o site ficar em loop de redirecionamento, comente as 3 linhas abaixo.
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- Padroniza o endereco sem "www" (https://autogrado.com.br) ---
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# --- Compressao (deixa o site mais leve e rapido) ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# --- Cache dos arquivos estaticos (carrega instantaneo nas proximas visitas) ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # HTML sempre atualizado (para as mudancas aparecerem na hora)
+  ExpiresByType text/html "access plus 0 seconds"
+  # Imagens, video, fontes, css e js: 1 ano
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+# --- Seguranca basica: nao listar o conteudo das pastas ---
+Options -Indexes

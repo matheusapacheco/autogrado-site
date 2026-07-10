@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autogrado · Revisão de SUV e importado com padrão de concessionária, Vicente Pires/DF</title>
+<meta name="description" content="Oficina premium especializada em SUV e importado em Vicente Pires (DF). Revisão e manutenção com método de concessionária, acompanhamento em tempo real e atendimento direto com os donos. Primeira parceira Mannol em Brasília.">
+<meta property="og:title" content="Autogrado · Padrão de concessionária. Atendimento de dono.">
+<meta property="og:description" content="Revisão de SUV e importado em Vicente Pires com método transparente: foto, vídeo e dossiê do que foi feito no seu carro.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autogrado.com.br/">
+<link rel="canonical" href="https://autogrado.com.br/">
+<meta property="og:image" content="https://autogrado.com.br/assets/hero-poster.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preload" href="assets/hero-poster.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="assets/fonts/saira-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Fontes self-hosted (2 familias: Saira Condensed + Inter) */
+@font-face{font-family:'Saira Condensed';font-weight:500;font-style:normal;font-display:swap;src:url(assets/fonts/saira-condensed-500.woff2) format('woff2')}
+@font-face{font-family:'Saira Condensed';font-weight:600;font-style:normal;font-display:swap;src:url(assets/fonts/saira-condensed-600.woff2) format('woff2')}
+@font-face{font-family:'Saira Condensed';font-weight:700;font-style:normal;font-display:swap;src:url(assets/fonts/saira-condensed-700.woff2) format('woff2')}
+@font-face{font-family:'Saira Condensed';font-weight:800;font-style:normal;font-display:swap;src:url(assets/fonts/saira-condensed-800.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-weight:400;font-style:normal;font-display:swap;src:url(assets/fonts/inter-400.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-weight:500;font-style:normal;font-display:swap;src:url(assets/fonts/inter-500.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-weight:600;font-style:normal;font-display:swap;src:url(assets/fonts/inter-600.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-weight:700;font-style:normal;font-display:swap;src:url(assets/fonts/inter-700.woff2) format('woff2')}
+/* Fallback ajustado p/ reduzir o deslocamento (CLS) na troca de fonte do titulo */
+@font-face{font-family:'Saira Fallback';src:local('Arial Narrow'),local('Arial');size-adjust:87%;ascent-override:96%;descent-override:26%;line-gap-override:0%}
+:root{
+  --amber:#FF5D15;--amber-600:#E05212;--amber-700:#BF4610;--amber-tint:#FFE9DD;--amber-glow:rgba(255,93,21,0.28);
+  --g900:#161616;--g800:#1E1E1E;--g700:#2A2A2A;--g600:#383838;--g500:#4A4A4A;--g400:#6E6E6E;--g300:#9A9A9A;--g200:#C9C9C9;--g100:#E6E6E5;--g50:#F4F4F2;
+  --bg:#FFFFFF;--surface:#F7F7F5;--sunken:#EFEFEC;
+  --tp:#1A1A1A;--ts:#4A4A4A;--tt:#6E6E6E;--inv:#FFFFFF;--on-amber:#1A1A1A;
+  --bd:#DCDCD8;--bd-sub:#ECECEA;
+  --wa:#25D366;--wa-h:#1FB457;--success:#16A34A;
+  --f-disp:'Saira Condensed','Saira Fallback','Archivo Narrow',Impact,sans-serif;
+  --f-head:'Saira Condensed','Saira Fallback','Archivo Narrow',Impact,sans-serif;
+  --f-body:'Inter',system-ui,-apple-system,sans-serif;
+  --f-mono:'Inter',system-ui,-apple-system,sans-serif;
+  --rs:6px;--rm:10px;--rl:16px;--rx:24px;--pill:100px;
+  --sh-sm:0 1px 2px rgba(22,22,22,.06),0 1px 3px rgba(22,22,22,.04);
+  --sh-md:0 4px 12px rgba(22,22,22,.08),0 2px 6px rgba(22,22,22,.05);
+  --sh-lg:0 12px 32px rgba(22,22,22,.12),0 4px 12px rgba(22,22,22,.08);
+  --sh-amber:0 6px 20px rgba(255,93,21,.30);
+  --ease:cubic-bezier(.4,0,.2,1);--ease-out:cubic-bezier(.16,1,.3,1);
+  --container:1140px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-body);color:var(--tp);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 24px}
+section{padding:clamp(40px,5vw,64px) 0}
+h1,h2,h3{font-family:var(--f-disp);font-style:italic;font-weight:800;text-transform:uppercase;line-height:1.02;letter-spacing:-0.01em}
+h2{font-size:clamp(2rem,4.4vw,3.1rem)}
+h3{font-size:1.5rem;font-weight:700}
+p{color:var(--ts)}
+a{color:inherit;text-decoration:none}
+.eyebrow{font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--amber-700);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:'';width:22px;height:2px;background:var(--amber)}
+.section-head{max-width:620px;margin-bottom:48px}
+.section-head p{font-size:1.1rem;margin-top:12px}
+
+/* BUTTONS */
+.btn{font-family:var(--f-head);font-weight:600;font-size:16px;border:none;border-radius:var(--rm);padding:16px 32px;cursor:pointer;transition:all .18s var(--ease);display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
+.btn-primary{background:var(--amber);color:var(--on-amber)}
+.btn-primary:hover{background:var(--amber-600);box-shadow:var(--sh-amber);transform:translateY(-1px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-h);transform:translateY(-1px)}
+.btn-ghost-light{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+.btn-ghost-light:hover{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn-ghost{background:transparent;color:var(--g700);border:1.5px solid var(--bd)}
+.btn-ghost:hover{border-color:var(--g700);background:var(--surface)}
+.btn-lg{padding:20px 40px;font-size:17px}
+.btn-block{width:100%}
+
+/* NAV */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(22,22,22,.96);backdrop-filter:blur(8px);border-bottom:1px solid #000}
+/* nav-inner full-width: logo e CTA ficam nas extremidades (fora do grid) */
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;position:relative;max-width:none;padding:0 32px}
+@media(max-width:640px){.nav-inner{padding:0 20px}}
+.nav-logo img{height:36px;display:block}
+/* Itens dentro do GRID: banda centralizada = largura do container (igual ao .wrap),
+   limitada pelo espaço entre logo e CTA pra nunca invadir as extremidades.
+   Logo e CTA ficam de fora dessa regra (extremidades do nav full-width). */
+.nav-links{display:flex;align-items:center;justify-content:space-between;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(calc(min(var(--container),100vw) - 48px),calc(100vw - 424px))}
+.nav-links a{color:var(--g200);font-size:clamp(13px,1.06vw,14.5px);font-weight:500;transition:color .15s;white-space:nowrap}
+.nav-links a:hover{color:var(--amber)}
+.nav-actions{display:flex;gap:12px;align-items:center}
+.nav-phone{color:#fff;font-family:var(--f-mono);font-size:14px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.nav-phone span{color:var(--amber)}
+.nav-wa{width:16px;height:16px;fill:#25D366;flex-shrink:0;vertical-align:middle}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;width:42px;height:42px;border-radius:10px;align-items:center;justify-content:center;flex-direction:column;gap:5px;transition:background .2s}
+.nav-toggle:hover{background:rgba(255,255,255,.08)}
+.nt-bar{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s var(--ease),opacity .2s}
+.nav-toggle[aria-expanded="true"] .nt-bar:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] .nt-bar:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] .nt-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{display:none;flex-direction:column;gap:4px;background:rgba(22,22,22,.99);border-top:1px solid #000;padding:16px 24px 24px}
+.nav-mobile a{color:var(--g100);font-size:16px;font-weight:500;padding:12px 8px;border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
+.nav-mobile a:hover{color:var(--amber)}
+.nav-mobile .nav-m-cta{color:var(--tp);margin-top:16px;border-bottom:none;justify-content:center}
+.nav-mobile .nav-m-phone{font-family:var(--f-mono);font-size:15px;color:#fff;border-bottom:none;text-align:center;margin-top:8px}
+.nav-mobile .nav-m-phone span{color:var(--amber)}
+.nav-mobile.open{display:flex;animation:navDrop .28s var(--ease-out)}
+@keyframes navDrop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+/* ===== BREAKPOINTS: Desktop >=1025 · Tablet 641-1024 · Mobile <=640 ===== */
+/* Colapso para hamburger é decidido por JS: quando o espaço entre itens cairia abaixo de 16px, adiciona .collapsed */
+.nav.collapsed .nav-links,.nav.collapsed .nav-phone,.nav.collapsed .nav-cta{display:none}
+.nav.collapsed .nav-toggle{display:flex}
+/* Estado efêmero de medição: mostra tudo (invisível) pra medir larguras reais */
+.nav.measuring .nav-links,.nav.measuring .nav-phone,.nav.measuring .nav-cta{display:flex!important;visibility:hidden}
+.nav.measuring .nav-toggle{display:none}
+/* Fallback sem JS: telas pequenas já entram no hamburger */
+@media(max-width:900px){
+  .nav-links,.nav-phone,.nav-cta{display:none}
+  .nav-toggle{display:flex}
+}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;color:#fff;background:var(--g900)}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle at 86% 16%,rgba(255,93,21,.16),transparent 42%),linear-gradient(180deg,rgba(18,18,18,.42) 0%,rgba(18,18,18,.28) 45%,rgba(18,18,18,.82) 100%),linear-gradient(102deg,rgba(18,18,18,.95) 0%,rgba(18,18,18,.80) 40%,rgba(18,18,18,.34) 72%,rgba(18,18,18,.22) 100%)}
+.hero::before{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.6;background:url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FF5D15' fill-opacity='0.035'%3E%3Cpath d='M22 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/svg%3E") repeat}
+.hero .wrap{position:relative;z-index:3}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(28px,4vw,56px);align-items:center}
+/* TEMPORARIO: card de video do hero oculto ate o institucional ficar pronto. Para reexibir, remova a classe "hero-grid--novideo" do div .hero-grid no HTML. */
+.hero-grid--novideo{grid-template-columns:1fr}
+.hero-grid--novideo .hero-watch{display:none}
+.hero-content{max-width:660px;padding:104px 0 112px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,93,21,.12);border:1px solid rgba(255,93,21,.35);color:var(--amber);font-family:var(--f-mono);font-size:12px;padding:8px 16px;border-radius:var(--pill);text-transform:uppercase;letter-spacing:.06em;margin-bottom:24px}
+.hero h1{font-size:clamp(2.5rem,5.2vw,4.1rem);color:#fff;margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--amber)}
+.hero-sub{font-size:1.2rem;color:var(--g200);max-width:46ch;margin-bottom:32px;line-height:1.55}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px}
+.hero-cta .btn{flex:1 1 0;min-width:0}
+.hero-trust{display:flex;gap:32px;flex-wrap:wrap}
+.trust-item .n{font-family:var(--f-disp);font-style:italic;font-weight:800;font-size:2rem;color:var(--amber);line-height:1}
+.trust-item .l{font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--g300);margin-top:4px}
+@media(max-width:860px){.hero-content{padding:64px 0 72px;max-width:none}}
+
+/* PHOTO PLACEHOLDER */
+.ph{border:2px dashed rgba(255,93,21,.5);border-radius:var(--rl);background:rgba(255,93,21,.05);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--amber);padding:24px;min-height:160px;height:100%}
+.ph.dark{border-color:var(--g500);background:var(--g800);color:var(--g300)}
+.ph .ico{font-size:30px;margin-bottom:8px;opacity:.85}
+.ph .t{font-family:var(--f-mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;line-height:1.5;max-width:24ch}
+
+/* TRIADE */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat{padding:32px 24px;border:1px solid var(--bd-sub);border-radius:var(--rl);background:var(--bg);box-shadow:var(--sh-sm);transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.feat:hover{transform:translateY(-3px);box-shadow:var(--sh-md)}
+.feat .ico{width:54px;height:54px;border-radius:var(--rm);background:var(--g900);color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px}
+.feat h3{font-size:1.25rem;margin-bottom:8px}
+.feat p{font-size:.98rem}
+@media(max-width:780px){.feat-grid{grid-template-columns:1fr}}
+
+/* SERVICES */
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.serv{padding:24px;border:1px solid var(--bd-sub);border-radius:var(--rl);background:var(--bg);box-shadow:var(--sh-sm)}
+.serv .ico{font-size:26px;color:var(--g700);margin-bottom:16px;display:block}
+.serv h4{font-family:var(--f-head);font-weight:600;font-size:1.12rem;margin-bottom:8px}
+.serv p{font-size:.92rem;color:var(--tt)}
+.serv.feature{background:var(--g700);color:#fff;border:none;position:relative;overflow:hidden}
+.serv.feature::after{content:'';position:absolute;right:-40px;top:-40px;width:160px;height:160px;background:radial-gradient(circle,var(--amber-glow),transparent 70%)}
+.serv.feature .ico{color:var(--amber)}
+.serv.feature h4{color:#fff}
+.serv.feature p{color:var(--g200)}
+.serv-price{display:inline-flex;align-items:baseline;gap:4px;margin-top:16px;font-family:var(--f-disp);font-style:italic;font-weight:800;font-size:1.9rem;color:var(--amber)}
+.serv-price small{font-family:var(--f-mono);font-style:normal;font-weight:400;font-size:.7rem;color:var(--g300);text-transform:uppercase}
+@media(max-width:860px){.serv-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.serv-grid{grid-template-columns:1fr}}
+
+/* PROCESS */
+.proc{background:var(--surface);padding-top:64px}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:8px}
+.proc-step{position:relative;padding-top:8px}
+.proc-num{font-family:var(--f-disp);font-style:italic;font-weight:800;font-size:3.4rem;color:var(--amber);line-height:1;margin-bottom:10px}
+.proc-step h4{font-family:var(--f-head);font-weight:600;font-size:1.15rem;margin-bottom:8px}
+.proc-step p{font-size:.92rem;color:var(--ts)}
+@media(max-width:860px){.proc-grid{grid-template-columns:1fr 1fr;gap:32px 24px}}
+@media(max-width:480px){.proc-grid{grid-template-columns:1fr}}
+
+/* METODO / TRANSPARENCIA */
+.metodo{background:var(--g900);color:#fff}
+.metodo .eyebrow{color:var(--amber)}
+.metodo h2{color:#fff}
+.metodo-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.metodo-list{list-style:none;margin-top:24px}
+.metodo-list li{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--g700)}
+.metodo-list .ck{color:var(--amber);font-size:20px;flex-shrink:0;margin-top:2px}
+.metodo-list h4{font-family:var(--f-head);font-weight:600;font-size:1.05rem;color:#fff;margin-bottom:2px}
+.metodo-list p{font-size:.92rem;color:var(--g300)}
+.metodo-photos{display:grid;grid-template-rows:1.3fr 1fr;gap:16px;height:100%}
+.metodo-photos .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:860px){.metodo-grid{grid-template-columns:1fr;gap:32px}.metodo-photos{min-height:380px}}
+
+/* BRANDS */
+.brands{text-align:center}
+.brand-row{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:center;align-items:center;margin-top:32px}
+.brand-row span{font-family:var(--f-head);font-weight:700;font-size:1.35rem;color:var(--g300);letter-spacing:.02em;transition:color .2s}
+.brand-row span:hover{color:var(--g700)}
+.brands-note{font-family:var(--f-mono);font-size:12px;color:var(--tt);margin-top:24px}
+
+/* CASE */
+.case-band{background:var(--surface)}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.case{background:var(--bg);border:1px solid var(--bd-sub);border-radius:var(--rl);padding:24px;box-shadow:var(--sh-sm)}
+.case .tag{font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--amber-700);font-weight:500}
+.case h4{font-family:var(--f-head);font-weight:600;font-size:1.18rem;margin:8px 0}
+.case p{font-size:.95rem;color:var(--ts)}
+.case .result{margin-top:16px;font-family:var(--f-disp);font-style:italic;font-weight:800;font-size:1.5rem;color:var(--g700)}
+.case .result em{font-style:italic;color:var(--success)}
+@media(max-width:860px){.case-grid{grid-template-columns:1fr}}
+
+/* DEPOIMENTOS */
+.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.review{background:var(--g700);color:#fff;border-radius:var(--rl);padding:32px}
+.review:nth-child(2){background:var(--g800)}
+.review .stars{color:var(--amber);letter-spacing:3px;font-size:16px;margin-bottom:16px}
+.review blockquote{font-size:1.18rem;font-weight:500;line-height:1.5;margin-bottom:16px}
+.review .who{font-family:var(--f-mono);font-size:13px;color:var(--g300)}
+.rev-cta{text-align:center;margin-top:30px}
+@media(max-width:780px){.rev-grid{grid-template-columns:1fr}}
+
+/* OFERTA CHECK LIST */
+.oferta{background:linear-gradient(150deg,var(--g800),var(--g700));color:#fff;border-radius:var(--rx);padding:48px 40px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.oferta::after{content:'';position:absolute;left:-60px;bottom:-80px;width:280px;height:280px;background:radial-gradient(circle,var(--amber-glow),transparent 68%)}
+.oferta-info{position:relative}
+.oferta .badge{display:inline-flex;background:var(--amber);color:var(--on-amber);font-family:var(--f-mono);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;padding:5px 12px;border-radius:var(--pill);margin-bottom:16px}
+.oferta h3{font-size:2.2rem;color:#fff;margin-bottom:16px}
+.oferta p{color:var(--g200);max-width:42ch;margin-bottom:8px}
+.oferta-price{position:relative;text-align:center;background:rgba(0,0,0,.25);border:1px solid rgba(255,93,21,.3);border-radius:var(--rl);padding:24px}
+.oferta-price .pre{font-family:var(--f-mono);font-size:12px;color:var(--g300);text-transform:uppercase;letter-spacing:.06em}
+.oferta-price .val{font-family:var(--f-disp);font-style:italic;font-weight:800;font-size:3.8rem;color:var(--amber);line-height:1;margin:8px 0}
+.oferta-price .desc{font-size:.85rem;color:var(--g300);margin-bottom:16px}
+@media(max-width:760px){.oferta{grid-template-columns:1fr;padding:32px 24px;gap:24px}}
+
+/* FORM */
+.lead{background:var(--sunken)}
+.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.lead-info .eyebrow{color:var(--amber-700)}
+.lead-info ul{list-style:none;margin-top:24px}
+.lead-info li{display:flex;gap:12px;padding:8px 0;color:var(--ts);font-size:1rem}
+.lead-info .ck{color:var(--success);font-weight:700}
+.form-card{background:var(--bg);border:1px solid var(--bd-sub);border-radius:var(--rl);padding:32px;box-shadow:var(--sh-md)}
+.form-card h3{font-size:1.5rem;margin-bottom:8px}
+.form-card .sub{font-size:.95rem;color:var(--tt);margin-bottom:24px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:8px}
+.field input,.field select{width:100%;font-family:var(--f-body);font-size:15px;padding:12px 16px;border:1.5px solid var(--bd);border-radius:var(--rm);background:var(--bg);transition:all .15s var(--ease)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 3px var(--amber-glow)}
+.form-note{font-family:var(--f-mono);font-size:11px;color:var(--tt);text-align:center;margin-top:16px}
+@media(max-width:780px){.lead-grid{grid-template-columns:1fr;gap:32px}}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--bd-sub)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:24px 0;font-family:var(--f-head);font-weight:600;font-size:1.12rem;color:var(--tp);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .pl{color:var(--amber-700);font-size:22px;transition:transform .2s;flex-shrink:0}
+.faq-q[aria-expanded="true"] .pl{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
+.faq-a p{padding:0 0 24px;color:var(--ts);max-width:68ch}
+
+/* LOCAL */
+.local{background:var(--g900);color:#fff}
+.local .eyebrow{color:var(--amber)}
+.local h2{color:#fff}
+.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.local-info{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.local-info .row{display:flex;gap:16px;align-items:flex-start}
+.local-info .ico{color:var(--amber);flex-shrink:0;width:24px;line-height:0;margin-top:1px}
+.local-info .ico svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.local-info h4{font-family:var(--f-head);font-weight:600;font-size:1.05rem;color:#fff;margin-bottom:2px}
+.local-info p{color:var(--g300);font-size:.95rem}
+.local-info a.row:hover h4{color:var(--amber)}
+.local-cta{margin-top:16px}
+.local-cta .btn{width:100%}
+@media(max-width:780px){.local-grid{grid-template-columns:1fr;gap:28px}}
+
+/* FOOTER */
+footer{background:#000;color:var(--g300);padding:48px 0 32px}
+.foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start;margin-bottom:32px}
+footer img{height:28px;margin-bottom:16px}
+.foot-col p{font-size:.9rem;color:var(--g400);max-width:34ch}
+.foot-links{display:flex;gap:24px;flex-wrap:wrap}
+.foot-links a{font-size:.9rem;color:var(--g300)}
+.foot-links a:hover{color:var(--amber)}
+.foot-bottom{border-top:1px solid var(--g700);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--f-mono);font-size:11px;color:var(--g500)}
+.foot-legal a{color:var(--g300);text-decoration:none}
+.foot-legal a:hover{color:var(--amber)}
+
+/* SVG ICONS (tríade + serviços + processo) */
+.feat .ico svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7}
+.serv .ico{width:auto;height:auto;line-height:0}
+.serv .ico svg{width:28px;height:28px;stroke:var(--g700);fill:none;stroke-width:1.7}
+.serv.feature .ico svg{stroke:var(--amber)}
+
+/* PROCESS redesenhado (fluxo conectado) */
+.proc-step{position:relative;text-align:center;padding-top:8px}
+.proc-node{display:flex;justify-content:center;margin-bottom:16px;position:relative}
+.proc-badge{width:58px;height:58px;border-radius:50%;background:var(--amber);color:var(--on-amber);font-family:var(--f-disp);font-style:italic;font-weight:800;font-size:1.7rem;line-height:1;display:flex;align-items:center;justify-content:center;padding-right:5px;flex-shrink:0;box-shadow:var(--sh-sm);position:relative;z-index:2}
+.proc-track{display:none}
+.proc-step:not(:last-child)::before{content:'';position:absolute;top:37px;left:50%;width:calc(100% + 20px);height:3px;transform:translateY(-50%);background:repeating-linear-gradient(90deg,var(--bd) 0 9px,transparent 9px 16px);z-index:1}
+.proc-ico{color:var(--amber-700);margin-bottom:10px;line-height:0;display:flex;justify-content:center}
+.proc-ico svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7}
+@media(max-width:860px){.proc-step::before{display:none}.proc-node{margin-bottom:16px}}
+
+/* BRANDS com logos */
+.brand-grid{display:flex;justify-content:center;align-items:center;margin-top:40px}
+.brand-track{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px 40px}
+.brand-track[aria-hidden]{display:none}
+.brand-grid img{height:64px;width:auto;max-width:150px;opacity:.82;transition:opacity .2s var(--ease),transform .2s var(--ease)}
+.brand-grid img:hover{opacity:1;transform:translateY(-3px)}
+/* Mobile: carrossel rotativo infinito com degradê esfumaçado nas laterais */
+@media(max-width:640px){
+  .brand-grid{flex-wrap:nowrap;justify-content:flex-start;overflow:hidden;margin-top:32px;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent)}
+  .brand-track{flex:0 0 auto;flex-wrap:nowrap;justify-content:flex-start;gap:48px;padding-left:48px;animation:brandMarq 18s linear infinite}
+  .brand-track[aria-hidden]{display:flex}
+  .brand-grid img{height:44px}
+}
+@keyframes brandMarq{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.brand-track{animation:none}}
+
+/* CASES alinhados */
+.case{display:flex;flex-direction:column}
+.case .result{margin-top:auto;padding-top:16px}
+
+/* CARROSSEL DE DEPOIMENTOS */
+.rev-rating{display:flex;align-items:center;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+.rev-rating .score{font-family:var(--f-disp);font-style:italic;font-weight:800;font-size:2.6rem;color:var(--g700);line-height:1}
+.rev-rating .stars{color:var(--amber);letter-spacing:2px;font-size:18px}
+.rev-rating .count{font-family:var(--f-mono);font-size:13px;color:var(--tt)}
+.rev-carousel{position:relative}
+.rev-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 12px;scrollbar-width:none}
+.rev-track::-webkit-scrollbar{display:none}
+.review{flex:0 0 calc(33.333% - 15px);min-width:300px;scroll-snap-align:start;margin:0}
+.review .who .g{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--amber);color:var(--on-amber);font-family:var(--f-head);font-weight:700;font-size:11px;margin-right:6px;vertical-align:middle}
+.rev-arrows{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+.rev-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:26px;flex-wrap:wrap}
+.rev-foot .rev-arrows{margin-top:0}
+.rev-arrow{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--bd);background:var(--bg);color:var(--g700);font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s var(--ease)}
+.rev-arrow:hover{border-color:var(--amber);color:var(--amber-700);background:var(--surface)}
+@media(max-width:860px){.review{flex:0 0 86%;min-width:0}}
+
+/* PACOTES POR MARCA · coverflow 3D (dark, igual ao Dossiê) */
+.pkg-band{background:radial-gradient(circle at 50% 45%,#1a1a1a,#080808 72%) fixed;color:#fff;padding-top:64px;padding-bottom:0}
+.pkg-band .section-head{margin-bottom:0}
+.pkg-band .section-head h2{color:#fff}
+.pkg-band .section-head p{color:var(--g200)}
+.cf-wrap{position:relative}
+.cf-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:clamp(20px,3.5vh,48px);background:transparent;perspective:1600px}
+.cf-head{position:absolute;top:30px;left:0;right:0;z-index:6;text-align:center;font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber)}
+.cf-track{display:flex;gap:40px;padding:0 calc(50vw - 24vw);will-change:transform;transform-style:preserve-3d;cursor:pointer}
+@media(max-width:860px){.cf-track{cursor:auto}}
+.cf-card{display:block;cursor:pointer;text-decoration:none;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;position:relative;flex:0 0 48vw;max-width:620px;height:min(70vh,calc(100vh - 260px));border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#161616;will-change:transform,opacity;transform-style:preserve-3d;backface-visibility:hidden}
+.cf-bg{position:absolute;inset:-5% -10%;background-size:cover;background-position:center}
+.cf-card::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,12,12,.88),rgba(12,12,12,.4) 60%,rgba(12,12,12,.12))}
+.cf-in{position:absolute;inset:0;z-index:2;padding:42px;display:flex;flex-direction:column;justify-content:flex-end}
+.cf-e{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
+.cf-brand{font-family:var(--f-disp);font-style:italic;font-weight:800;text-transform:uppercase;font-size:clamp(2.2rem,4vw,3.4rem);line-height:.9;color:#fff}
+.cf-models{font-family:var(--f-mono);font-size:12px;color:var(--g300);margin-top:10px}
+.cf-feat{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:8px 22px;margin:20px 0 24px;max-width:520px}
+.cf-feat span{display:flex;gap:9px;align-items:center;font-size:.88rem;color:var(--g200)}
+.cf-feat svg{width:14px;height:14px;flex-shrink:0;stroke:var(--amber);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.cf-cta{align-self:flex-start;background:var(--amber);color:#161616;font-family:var(--f-head);font-weight:700;font-size:15px;padding:14px 32px;border-radius:100px;text-decoration:none;transition:background .2s,color .2s}
+.cf-card:hover .cf-cta{background:#fff}
+.cf-prog{position:absolute;left:40px;right:40px;bottom:30px;z-index:6;height:2px;background:rgba(255,255,255,.15);border-radius:2px}
+.cf-prog i{display:block;height:100%;width:0;background:var(--amber);border-radius:2px}
+@media(max-width:860px){
+  .cf-wrap{height:auto!important}
+  .cf-sticky{position:static;height:auto;display:block;padding:8px 0 24px;background:transparent;perspective:none}
+  .cf-sticky .section-head{margin-bottom:24px}
+  .cf-head{position:static;margin-bottom:16px}
+  .cf-track{flex-direction:column;transform:none!important;padding:0 24px;gap:18px}
+  .cf-card{flex:none;width:100%;height:auto;max-width:none;transform:none!important;opacity:1!important}
+  .cf-bg{position:relative;inset:0;height:220px}
+  .cf-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 36%,rgba(22,22,22,.55) 68%,#161616)}
+  .cf-card::after{display:none}
+  .cf-in{position:relative;inset:auto;padding:0 24px 28px;margin-top:-72px}
+  .cf-cta{align-self:stretch;width:100%;text-align:center;padding:15px}
+  .cf-prog{display:none}
+}
+/* Telas baixas (notebooks): compacta o conteúdo do card pra não cortar dentro do 100vh */
+@media(min-width:861px) and (max-height:780px){
+  .pkg-band{padding-top:32px}
+  .pkg-band .section-head p{display:none}
+  .cf-in{padding:30px}
+  .cf-brand{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+  .cf-models{margin-top:6px}
+  .cf-feat{gap:6px 20px;margin:14px 0 16px}
+  .cf-feat span{font-size:.82rem}
+  .cf-cta{padding:11px 26px;font-size:14px}
+  .cf-prog{bottom:18px}
+}
+@media(prefers-reduced-motion:reduce){.cf-card{transform:none!important}}
+
+/* CONHEÇA A AUTOGRADO (galeria estrutura/equipe/diferenciais) */
+.gal-carousel{position:relative}
+.galeria{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:4px 2px 10px;scrollbar-width:none}
+.galeria::-webkit-scrollbar{display:none}
+.galeria .gi{position:relative;flex:0 0 calc((100% - 28px)/3);height:300px;scroll-snap-align:start;overflow:hidden;border-radius:18px;margin:0;cursor:zoom-in;border:1px solid rgba(255,255,255,.07);box-shadow:0 10px 30px rgba(0,0,0,.28)}
+.galeria .gi img{width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.galeria .gi::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.5),transparent 46%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+.galeria .gi:hover img{transform:scale(1.06)}
+.galeria .gi:hover::after{opacity:1}
+.galeria .gi-x{position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:rgba(255,93,21,.94);color:#0a0a0a;display:grid;place-items:center;opacity:0;transform:translateY(8px) scale(.9);transition:.35s var(--ease);pointer-events:none;z-index:2}
+.galeria .gi-x svg{width:18px;height:18px;display:block}
+.galeria .gi:hover .gi-x{opacity:1;transform:none}
+.gal-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:6;width:48px;height:48px;border-radius:50%;background:rgba(18,18,18,.82);border:1px solid var(--g600);color:#fff;font-size:26px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:.2s;backdrop-filter:blur(4px)}
+.gal-nav:hover{background:var(--amber);color:var(--on-amber);border-color:var(--amber)}
+.gal-prev{left:-6px}.gal-next{right:-6px}
+.gal-tag{font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;color:var(--amber-700);font-weight:500;display:block;margin-bottom:4px}
+@media(max-width:900px){.galeria .gi{flex-basis:calc((100% - 14px)/2);height:262px}}
+@media(max-width:600px){.galeria .gi{flex-basis:85%;height:250px}.gal-nav{display:none}}
+/* CTA fixo inferior */
+/* CTA fixo, SOMENTE mobile */
+.cta-fixed{position:fixed;left:0;right:0;bottom:0;z-index:90;transform:translateY(130%);transition:transform .4s var(--ease);background:rgba(16,16,16,.94);backdrop-filter:blur(12px);border-top:1px solid var(--g600);padding:12px 24px;display:none;align-items:center;justify-content:center;gap:16px}
+.cta-fixed.show{transform:none}
+.cta-fixed .cf-txt{display:none}
+.cta-fixed .btn{width:100%;padding:15px 30px;font-size:15px}
+.wa-float{transition:transform .2s,bottom .35s var(--ease)}
+@media(max-width:600px){
+  .cta-fixed{display:flex;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+  body.cta-shown .wa-float{bottom:94px}
+}
+/* CTA dentro das dobras, SOMENTE desktop */
+.sec-cta{display:flex;justify-content:center;margin-top:46px}
+@media(max-width:600px){.sec-cta{display:none}}
+
+/* VÍDEO INSTITUCIONAL */
+.video-band{background:var(--g900);color:#fff}
+.video-band .eyebrow{color:var(--amber);justify-content:center}
+.video-band h2{color:#fff}
+.video-wrap{max-width:920px;margin:0 auto;position:relative;aspect-ratio:16/9;border-radius:var(--rx);overflow:hidden;border:1px solid var(--g600);background:var(--g800)}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:var(--g300);text-align:center;padding:24px}
+.video-ph .play{width:76px;height:76px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-amber)}
+.video-ph .play svg{width:30px;height:30px;fill:#1A1A1A;margin-left:5px}
+.video-ph .t{font-family:var(--f-mono);font-size:12px;letter-spacing:.04em}
+
+/* HERO · CARD DE VÍDEO (preview premium com play) */
+.hero-watch{position:relative;z-index:3;width:100%;max-width:480px;justify-self:end;background:rgba(20,20,20,.55);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:12px;cursor:pointer;display:block;text-align:left;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 44px rgba(0,0,0,.45);transition:transform .35s var(--ease-out),border-color .3s var(--ease),box-shadow .3s var(--ease)}
+.hero-watch:hover{transform:scale(1.025);border-color:rgba(255,93,21,.55);box-shadow:0 26px 64px rgba(0,0,0,.55)}
+.hvc-thumb{position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:var(--g800)}
+.hvc-thumb img{width:100%;height:100%;object-fit:cover;display:block;border-radius:12px;filter:grayscale(.5) brightness(.72);transition:filter .5s var(--ease)}
+.hero-watch:hover .hvc-thumb img{filter:grayscale(0) brightness(.85)}
+.hvc-thumb::after{content:'';position:absolute;inset:0;border-radius:12px;background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(20,20,20,.4));z-index:1}
+.hvc-play{position:absolute;inset:0;margin:auto;z-index:2;width:54px;height:54px;border-radius:50%;background:var(--amber);display:grid;place-items:center;box-shadow:0 8px 22px rgba(255,93,21,.45);transition:transform .25s var(--ease-out)}
+.hvc-play svg{width:24px;height:24px;display:block;fill:#161616;margin-left:3px}
+.hero-watch:hover .hvc-play{transform:scale(1.1)}
+.hvc-play::after{content:'';position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(255,93,21,.5);animation:hvcPulse 2.6s ease-out infinite}
+@keyframes hvcPulse{0%{box-shadow:0 0 0 0 rgba(255,93,21,.45)}70%{box-shadow:0 0 0 16px rgba(255,93,21,0)}100%{box-shadow:0 0 0 0 rgba(255,93,21,0)}}
+.hvc-dur{position:absolute;right:8px;bottom:8px;z-index:2;font-family:var(--f-mono);font-size:10px;letter-spacing:.04em;color:#fff;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.18);padding:2px 7px;border-radius:6px}
+.hvc-meta{display:flex;align-items:center;gap:8px;padding:12px 8px 4px}
+.hvc-ico{width:30px;height:30px;border-radius:8px;background:rgba(255,93,21,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hvc-ico svg{width:15px;height:15px;fill:var(--amber)}
+.hvc-label{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:2px}
+.hvc-sub{font-family:var(--f-head);font-weight:600;font-size:14px;color:#fff;line-height:1.15}
+/* Tablet + Mobile (<=1024): card sai do flutuante, entra no fluxo centralizado, largura útil = botões */
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:0}.hero-watch{max-width:440px;justify-self:center;width:100%;margin:30px auto 0;background:rgba(20,20,20,.78)}.hero-watch:hover{transform:scale(1.01)}}
+
+/* MODAL DE VÍDEO */
+.vmodal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:24px}
+.vmodal[hidden]{display:none}
+.vmodal-bg{position:absolute;inset:0;background:rgba(8,8,8,.88);backdrop-filter:blur(3px)}
+.vmodal-card{position:relative;z-index:1;width:min(960px,100%)}
+.vmodal-x{position:absolute;top:-46px;right:0;background:none;border:none;color:#fff;font-size:34px;line-height:1;cursor:pointer}
+.vmodal-player{position:relative;aspect-ratio:16/9;border-radius:var(--rl);overflow:hidden;background:var(--g800);border:1px solid var(--g600)}
+.vmodal-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* SERVIÇOS · CARD COM IMAGEM (estilo combo) */
+.serv{padding:0!important;overflow:hidden;display:flex;flex-direction:column;border-radius:20px;box-shadow:var(--sh-md);background:var(--bg);border:1px solid var(--bd-sub)}
+.serv.feature{border-color:var(--amber)}
+.serv-img{aspect-ratio:16/10;position:relative;overflow:hidden;background:var(--g100)}
+.serv-img img{width:100%;height:100%;object-fit:cover;display:block}
+.serv-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;background:rgba(255,93,21,.05);color:var(--amber-700);border-bottom:1px dashed rgba(255,93,21,.32)}
+.serv-ph svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7}
+.serv-ph .t{font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:0 12px}
+.serv-body{padding:20px 22px;display:flex;flex-direction:column;flex:1}
+.serv-body h4{font-family:var(--f-head);font-weight:600;font-size:1.12rem;margin-bottom:8px}
+.serv-body p{font-size:.92rem;color:var(--tt);margin:0}
+.serv-price{display:inline-flex;align-items:baseline;gap:6px;margin-top:16px;font-family:var(--f-disp);font-style:italic;font-weight:800;font-size:1.9rem;color:var(--amber)}
+.serv-price small{font-family:var(--f-mono);font-style:normal;font-weight:400;font-size:.7rem;color:var(--tt);text-transform:uppercase}
+
+/* PLACEHOLDER de foto nos combos (marcas sem foto ainda) */
+.pkg-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;background:rgba(255,93,21,.05);color:var(--amber-700)}
+.pkg-ph svg{width:26px;height:26px}
+.pkg-ph .t{font-family:var(--f-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase}
+
+/* OFICINA POR DENTRO · fundo escuro (igual seção do dossiê) */
+#oficina{background:var(--g900)}
+#oficina .eyebrow{color:var(--amber)}
+#oficina h2{color:#fff}
+#oficina .section-head p{color:var(--g300)}
+#oficina .ph{border-color:var(--g500);background:rgba(255,255,255,.03);color:var(--g300)}
+#oficina .gal-tag{color:var(--amber)}
+
+/* ===== TESTE DARK MODE: páginas escuras, exceto Processo, Marcas, Check-list e FAQ ===== */
+section.dark{background:var(--g900);color:var(--g200)}
+section.dark .eyebrow{color:var(--amber)}
+section.dark .section-head h2{color:#fff}
+section.dark .section-head p{color:var(--g300)}
+/* Tríade · Por que a Autogrado */
+section.dark .feat{background:var(--g800);border-color:rgba(255,255,255,.07);box-shadow:none}
+section.dark .feat:hover{box-shadow:0 14px 34px rgba(0,0,0,.45)}
+section.dark .feat .ico{background:rgba(255,93,21,.14)}
+section.dark .feat h3{color:#fff}
+section.dark .feat p{color:var(--g300)}
+/* Serviços */
+section.dark .serv{background:var(--g800);border-color:rgba(255,255,255,.07)}
+section.dark .serv.feature{border-color:var(--amber)}
+section.dark .serv.feature{background:#22160e}
+section.dark .serv-img{background:var(--g700)}
+section.dark .serv-body h4{color:#fff}
+section.dark .serv-body p{color:var(--g300)}
+/* Leve destaque do card Check List Viagem na seção de serviços */
+.serv.feature{box-shadow:0 0 0 1.5px var(--amber),0 20px 48px rgba(255,93,21,.16);position:relative;z-index:1}
+.serv.feature .serv-body::before{content:'Mais procurado';align-self:flex-start;font-family:var(--f-mono);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--on-amber);background:var(--amber);padding:4px 10px;border-radius:var(--pill);margin-bottom:12px}
+/* Depoimentos (cards já são escuros; ajusta nota, score e setas) */
+section.dark .rev-rating .score{color:#fff}
+section.dark .rev-rating .count{color:var(--g300)}
+section.dark .rev-arrow{border-color:var(--g600);background:var(--g800);color:var(--g100)}
+section.dark .rev-arrow:hover{border-color:var(--amber);color:var(--amber);background:var(--g700)}
+/* Botão "Ver todas as avaliações", versão clara no dark */
+section.dark .btn-ghost{color:#fff;border-color:rgba(255,255,255,.3)}
+section.dark .btn-ghost:hover{border-color:var(--wa);background:var(--wa);color:#fff}
+/* Formulário · card branco mantido pra legibilidade do form */
+section.dark.lead{background:var(--g900)}
+section.dark .lead-info h2{color:#fff}
+section.dark .lead-info > p{color:var(--g300)}
+section.dark .lead-info .eyebrow{color:var(--amber)}
+section.dark .lead-info li{color:var(--g300)}
+section.dark .lead-info .ck{color:var(--success)}
+
+
+/* FAQ · imagem à esquerda */
+.faq-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:start}
+.faq-media{position:sticky;top:90px;aspect-ratio:3/4;border-radius:var(--rl);overflow:hidden;background:var(--g100);border:2px dashed rgba(255,93,21,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--amber-700)}
+.faq-media svg{width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:1.6}
+.faq-media .t{font-family:var(--f-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;text-align:center;padding:0 16px}
+@media(max-width:820px){.faq-layout{grid-template-columns:1fr;gap:28px}.faq-media{aspect-ratio:16/10;position:static}}
+
+/* BANNER + GERENCIADOR DE COOKIES */
+.cookie{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:300;max-width:760px;width:calc(100% - 32px);background:var(--g800);border:1px solid var(--g600);border-radius:var(--rl);box-shadow:var(--sh-lg);padding:16px 24px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.cookie[hidden]{display:none}
+.cookie p{color:var(--g200);font-size:.9rem;margin:0;flex:1;min-width:240px;line-height:1.5}
+.cookie p a{color:var(--amber)}
+.cookie .acts{display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap}
+.cookie .acts .btn{padding:10px 20px;font-size:14px}
+.ck-deny{background:transparent;border:1.5px solid var(--g500);color:#fff}
+.ck-deny:hover{border-color:#fff;background:rgba(255,255,255,.05)}
+.ck-ghost{background:rgba(255,255,255,.06);border:1.5px solid var(--g500);color:#fff}
+.ck-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+@media(max-width:640px){.cookie{flex-direction:column;align-items:stretch;bottom:16px}.cookie .acts .btn{flex:1;justify-content:center}}
+/* Modal de preferências */
+.ck-modal{position:fixed;inset:0;z-index:400;display:flex;align-items:center;justify-content:center;padding:16px}
+.ck-modal[hidden]{display:none}
+.ck-modal-bg{position:absolute;inset:0;background:rgba(10,10,10,.72);backdrop-filter:blur(3px)}
+.ck-modal-card{position:relative;z-index:1;width:100%;max-width:560px;max-height:88vh;overflow:auto;background:var(--bg);border-radius:var(--rl);padding:32px;box-shadow:var(--sh-lg)}
+.ck-modal-card h3{font-family:var(--f-disp);font-style:italic;font-weight:800;text-transform:uppercase;font-size:1.6rem;margin-bottom:8px;color:var(--tp)}
+.ck-intro{color:var(--ts);font-size:.95rem;margin-bottom:24px;max-width:none}
+.ck-x{position:absolute;top:16px;right:16px;background:none;border:none;font-size:28px;line-height:1;color:var(--tt);cursor:pointer}
+.ck-x:hover{color:var(--tp)}
+.ck-cat{border-top:1px solid var(--bd-sub);padding:16px 0}
+.ck-cat-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:4px}
+.ck-cat-head strong{font-family:var(--f-head);font-size:1rem;color:var(--tp)}
+.ck-cat p{font-size:.85rem;color:var(--tt);margin:0;line-height:1.5}
+.ck-always{font-family:var(--f-mono);font-size:11px;color:var(--amber-700);text-transform:uppercase;letter-spacing:.04em}
+.ck-switch{position:relative;display:inline-block;width:44px;height:24px;flex-shrink:0}
+.ck-switch input{opacity:0;width:0;height:0}
+.ck-slider{position:absolute;inset:0;background:var(--bd);border-radius:100px;transition:.2s;cursor:pointer}
+.ck-slider:before{content:'';position:absolute;height:18px;width:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.ck-switch input:checked + .ck-slider{background:var(--amber)}
+.ck-switch input:checked + .ck-slider:before{transform:translateX(20px)}
+.ck-modal-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;padding-top:24px;border-top:1px solid var(--bd-sub)}
+.ck-modal-acts .btn{flex:1;min-width:128px;padding:12px 16px;font-size:14px}
+.ck-modal-acts .ck-deny,.ck-modal-acts .ck-ghost{color:var(--tp);border-color:var(--bd);background:transparent}
+.ck-modal-acts .ck-deny:hover,.ck-modal-acts .ck-ghost:hover{border-color:var(--g700);background:var(--surface)}
+
+/* ÍCONE WHATSAPP */
+.wa-ico{width:1.15em;height:1.15em;fill:currentColor;flex-shrink:0;vertical-align:-0.18em}
+
+/* FLOATING WA */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;background:var(--wa);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.45);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08);background:var(--wa-h)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+/* AJUSTES MOBILE: texto centralizado + CTAs full-width + processo vertical */
+@media(max-width:640px){
+  .hero-content{text-align:center}
+  .hero-badge{margin-left:auto;margin-right:auto}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-cta{flex-direction:column;align-items:stretch;gap:12px}
+  .hero-trust{justify-content:center;gap:26px}
+  .hero-cta .btn,.rev-foot .btn,.local-cta .btn{width:100%}
+  .rev-foot{flex-direction:column;align-items:stretch;gap:16px}
+  .rev-foot .rev-arrows{display:none}
+  .local-cta{display:flex}
+  .proc-grid{grid-template-columns:1fr;gap:0}
+  .proc-step{text-align:center;padding-bottom:26px}
+  .proc-node{flex-direction:column;align-items:center;margin-bottom:12px}
+  .proc-badge{margin:0 auto}
+  .proc-track{display:block;width:3px;height:26px;flex:none;margin:10px auto 0;background:repeating-linear-gradient(180deg,var(--bd) 0 8px,transparent 8px 15px)}
+  .proc-step:last-child .proc-track{display:block;visibility:visible}
+  .proc-ico{display:none}
+}
+/* ===== MOVIMENTO: scroll-reveal + parallax (premium, respeita reduced-motion) ===== */
+@media (prefers-reduced-motion:no-preference){
+  .js-anim .reveal{opacity:0;transform:translateY(30px);transition:opacity .75s var(--ease-out),transform .75s var(--ease-out)}
+  .js-anim .reveal.in{opacity:1;transform:none}
+  .js-anim .reveal.d1{transition-delay:.08s}
+  .js-anim .reveal.d2{transition-delay:.16s}
+  .js-anim .reveal.d3{transition-delay:.24s}
+  .js-anim .reveal.d4{transition-delay:.32s}
+  .js-anim [data-parallax]{will-change:transform}
+}
+.metodo-photos img{width:100%;height:100%;object-fit:cover;border-radius:var(--rl);display:block}
+.galeria img{width:100%;height:100%;object-fit:cover;border-radius:var(--rl);display:block}
+.faq-media picture{width:100%;height:100%;display:block}
+.faq-media img{width:100%;height:100%;object-fit:cover;display:block}
+.faq-media.filled{border:0;background:none}
+.galeria img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:1000;background:rgba(8,8,8,.94);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .25s ease}
+.lb.open{display:flex;opacity:1}
+.lb-stage{max-width:90vw;max-height:84vh;display:flex;align-items:center;justify-content:center}
+.lb-stage img{max-width:90vw;max-height:84vh;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.65);user-select:none;-webkit-user-drag:none}
+.lb-btn{position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;width:52px;height:52px;border-radius:50%;font-size:24px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:.2s;z-index:2}
+.lb-btn:hover{background:var(--amber);border-color:var(--amber);color:#0a0a0a}
+.lb-prev{left:24px;top:50%;transform:translateY(-50%)}
+.lb-next{right:24px;top:50%;transform:translateY(-50%)}
+.lb-close{top:22px;right:22px;width:46px;height:46px;font-size:20px}
+.lb-count{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:var(--f-mono);font-size:13px;letter-spacing:.1em;color:rgba(255,255,255,.82)}
+@media(max-width:600px){.lb-prev{left:10px}.lb-next{right:10px}.lb-btn{width:44px;height:44px;font-size:22px}}
+</style>
+<script>
+/* Google Consent Mode v2, tudo NEGADO por padrão até o usuário consentir (LGPD).
+   Qualquer tag de Google Analytics / Google Ads adicionada depois respeita isto automaticamente. */
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="nav-logo"><img src="assets/logo-autogrado-amarelo-transparente.png" alt="Autogrado"></a>
+    <nav class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#metodo">Transparência</a>
+      <a href="#pacotes">Pacotes</a>
+      <a href="#oficina">A oficina</a>
+      <a href="#depoimentos">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#agendar" class="btn btn-primary nav-cta" style="padding:11px 22px;font-size:15px">Agendar revisão</a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
+        <span class="nt-bar"></span><span class="nt-bar"></span><span class="nt-bar"></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" id="navMobile" aria-label="Menu">
+    <a href="#servicos">Serviços</a>
+    <a href="#processo">Processo</a>
+    <a href="#metodo">Transparência</a>
+    <a href="#pacotes">Pacotes</a>
+    <a href="#oficina">A oficina</a>
+    <a href="#depoimentos">Avaliações</a>
+    <a href="#contato">Contato</a>
+    <a href="#agendar" class="btn btn-primary btn-block nav-m-cta">Agendar revisão</a>
+    <a href="https://wa.me/5561993104919?text=Ol%C3%A1!%20Quero%20agendar%20uma%20revis%C3%A3o%20na%20Autogrado." target="_blank" rel="noopener" class="nav-m-phone"><svg class="nav-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> (61) 99310-4919</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <video class="hero-video" muted loop playsinline preload="none" poster="assets/hero-poster.jpg">
+    <source data-hero-mobile src="assets/hero-oficina-mobile.mp4" type="video/mp4">
+    <source data-hero-desktop src="assets/hero-oficina.mp4" type="video/mp4">
+  </video>
+  <script>(function(){var v=document.querySelector('.hero-video');if(!v)return;var mob=window.matchMedia('(max-width:820px)').matches;var rm=v.querySelector(mob?'[data-hero-desktop]':'[data-hero-mobile]');if(rm&&v.querySelectorAll('source').length>1)rm.remove();function go(){try{v.load();var p=v.play();if(p&&p.catch)p.catch(function(){});}catch(e){}}if(document.readyState==='complete'){setTimeout(go,150);}else{window.addEventListener('load',function(){setTimeout(go,150);});}})();</script>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-grid hero-grid--novideo">
+    <div class="hero-content">
+        <span class="hero-badge">★ Parceira oficial Mannol. A única em Brasília.</span>
+        <h1>Oficina premium especializada em SUVs e veículos de <em>alto valor.</em></h1>
+        <p class="hero-sub">Você vai saber exatamente o que foi feito no seu carro. Antes, durante e depois.</p>
+        <div class="hero-cta">
+          <a href="#agendar" class="btn btn-primary btn-lg">Agendar minha revisão</a>
+          <a href="https://wa.me/5561993104919?text=Ol%C3%A1!%20Quero%20agendar%20uma%20revis%C3%A3o%20na%20Autogrado." target="_blank" rel="noopener" class="btn btn-ghost-light btn-lg"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Falar no WhatsApp agora</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><div class="n">4,9</div><div class="l">Nota no Google</div></div>
+          <div class="trust-item"><div class="n">8 em 10</div><div class="l">Clientes que voltam</div></div>
+          <div class="trust-item"><div class="n">90 dias</div><div class="l">Garantia por escrito</div></div>
+        </div>
+    </div>
+    <button class="hero-watch" data-openvideo aria-label="Assistir ao vídeo institucional">
+    <span class="hvc-thumb">
+      <img src="assets/hero-poster.jpg" alt="">
+      <span class="hvc-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 0 1 0 1.971l-11.54 6.347c-.75.412-1.667-.13-1.667-.985V5.653Z"/></svg></span>
+      <span class="hvc-dur">1:00</span>
+    </span>
+    <span class="hvc-meta">
+      <span class="hvc-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 0 1 0 1.971l-11.54 6.347c-.75.412-1.667-.13-1.667-.985V5.653Z"/></svg></span>
+      <span><span class="hvc-label">Vídeo institucional</span><span class="hvc-sub">Conheça a oficina por dentro</span></span>
+    </span>
+  </button>
+  </div>
+</section>
+
+<!-- TRIADE -->
+<section id="diferenciais" class="dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Por que a Autogrado</div>
+      <h2>Método de concessionária<br>sem o preço de concessionária.</h2>
+      <p>A sua oficina premium em Vicente Pires. Trabalhamos com processos, equipamentos e diagnósticos de alto nível, oferecendo total transparência em cada etapa do serviço.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 10.5h3v-3L6.6 4.1a6 6 0 0 1 7.8 7.8l5.5 5.5a1.9 1.9 0 0 1-2.7 2.7l-5.5-5.5a6 6 0 0 1-7.8-7.8z"/></svg></div>
+        <h3>Método de concessionária</h3>
+        <p>Torque calibrado conforme a especificação da montadora, fluidos na medida certa e cada etapa registrada. O mesmo padrão da concessionária, sem o preço dela.</p>
+      </div>
+      <div class="feat">
+        <div class="ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5.4"/><path d="m8.4 13.2-1.9 7.3 5.5-3 5.5 3-1.9-7.3"/><path d="M12 6.3l1 2 2.2.3-1.6 1.5.4 2.1-2-1.05-2 1.05.4-2.1L8.8 8.6l2.2-.3z"/></svg></div>
+        <h3>Mecânicos de 1ª classe</h3>
+        <p>Seu carro nas mãos de mecânicos certificados e treinados pelas montadoras. Cada serviço sai assinado por quem entende de premium, sem balcão anônimo.</p>
+      </div>
+      <div class="feat">
+        <div class="ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M9 12.5h6M9 16h6M9 9h3"/></svg></div>
+        <h3>Dossiê Autogrado</h3>
+        <p>No fim, você recebe o Dossiê Autogrado: um relatório impresso com tudo o que foi feito no carro, peças trocadas e as próximas revisões. A prova fica com você.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICOS -->
+<section id="servicos" class="dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">O que a gente resolve</div>
+      <h2>Serviços especializados pra SUV e importado.</h2>
+      <p>Revisão e manutenção de SUV e importado com diagnóstico que acha a causa real. Você para de pagar pelo que o carro não precisa.</p>
+    </div>
+    <div class="serv-grid">
+      <div class="serv">
+        <div class="serv-img"><img src="assets/fotos/eletrica-especializada.jpg" alt="Elétrica especializada" loading="lazy"></div>
+        <div class="serv-body"><h4>Elétrica especializada</h4><p>Especialidade da casa. Scanner e leitura de módulos para achar a causa real, não trocar peça no chute.</p></div>
+      </div>
+      <div class="serv">
+        <div class="serv-img"><img src="assets/fotos/oleo-cambio.jpg" alt="Troca de óleo de câmbio" loading="lazy"></div>
+        <div class="serv-body"><h4>Troca de óleo de câmbio</h4><p>Fluido e procedimento corretos para a transmissão automática durar e trocar marcha suave.</p></div>
+      </div>
+      <div class="serv feature">
+        <div class="serv-img"><img src="assets/fotos/checklist.jpg" alt="Check List Viagem" loading="lazy"></div>
+        <div class="serv-body"><h4>Check List Viagem</h4><p>Antes da estrada, conferimos elétrico, suspensão, ignição, freios, arrefecimento e motor. Laudo no WhatsApp e impresso.</p><div class="serv-price">R$ 250 <small>preço fechado</small></div></div>
+      </div>
+      <div class="serv">
+        <div class="serv-img"><img src="assets/fotos/revisao-premium.jpg" alt="Revisão Premium Autogrado" loading="lazy"></div>
+        <div class="serv-body"><h4>Revisão Premium Autogrado</h4><p>Revisão programada completa, com relatório técnico de entrada e saída e o Dossiê Autogrado impresso.</p></div>
+      </div>
+      <div class="serv">
+        <div class="serv-img"><img src="assets/fotos/manutencao-corretiva.jpg" alt="Manutenção corretiva" loading="lazy"></div>
+        <div class="serv-body"><h4>Manutenção corretiva</h4><p>Reparo com diagnóstico preciso, peça mostrada antes de instalar e garantia por escrito.</p></div>
+      </div>
+      <div class="serv">
+        <div class="serv-img"><img src="assets/fotos/alinhamento-3d.jpg" alt="Alinhamento 3D e balanceamento" loading="lazy"></div>
+        <div class="serv-body"><h4>Alinhamento 3D e balanceamento</h4><p>Geometria 3D e balanceamento para direção precisa e pneus com vida mais longa.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section id="processo" class="proc">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Como funciona</div>
+      <h2>Seu carro em 4 etapas. Você no controle de todas.</h2>
+      <p>Do diagnóstico à entrega, você aprova, acompanha e leva tudo documentado.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-step">
+        <div class="proc-node"><div class="proc-badge">01</div><span class="proc-track"></span></div>
+        <div class="proc-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-3.8-3.8"/></svg></div>
+        <h4>Diagnóstico</h4><p>Scanner eletrônico, fotos de entrada em 4 ângulos e do cofre do motor. Registrado desde a chegada.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-node"><div class="proc-badge">02</div><span class="proc-track"></span></div>
+        <div class="proc-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5h6l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-8.5A1.5 1.5 0 0 1 6.5 19V5A1.5 1.5 0 0 1 8 3.5z"/><path d="M14 3.5v4h4"/><path d="m9.3 13 1.6 1.6 3.2-3.4"/></svg></div>
+        <h4>Orçamento transparente</h4><p>Você aprova item a item, com foto da peça e preço claro. Sem surpresa.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-node"><div class="proc-badge">03</div><span class="proc-track"></span></div>
+        <div class="proc-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h4>Execução acompanhada</h4><p>Você acompanha cada etapa pelo WhatsApp, em tempo real. Fica no controle do que é feito no seu carro.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-node"><div class="proc-badge">04</div><span class="proc-track"></span></div>
+        <div class="proc-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.2 12 2.6 2.6 4.8-5.2"/></svg></div>
+        <h4>Entrega com dossiê</h4><p>Relatório técnico em A4 + garantia por escrito. Histórico guardado por 2 anos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METODO / TRANSPARENCIA -->
+<section id="metodo" class="metodo">
+  <div class="wrap">
+    <div class="metodo-grid">
+      <div>
+        <div class="eyebrow">Transparência</div>
+        <h2>Dossiê Autogrado impresso.</h2>
+        <p style="color:var(--g200);font-size:1.1rem">Aqui você acompanha cada serviço por um link no WhatsApp, tudo por foto, e recebe o orçamento antes de qualquer coisa. Sem surpresa.</p>
+        <ul class="metodo-list">
+          <li><span class="ck">✓</span><div><h4>Foto da peça velha e da nova, lado a lado</h4><p>Na mesma bancada, antes de instalar. Você vê o que saiu e o que entrou.</p></div></li>
+          <li><span class="ck">✓</span><div><h4>Plataforma online com link próprio</h4><p>Acompanhe o serviço em tempo real pelo celular. Acesso vigente por 2 anos.</p></div></li>
+          <li><span class="ck">✓</span><div><h4>Dossiê técnico impresso em A4</h4><p>Entregue na devolução do carro, com tudo que foi feito e as próximas revisões.</p></div></li>
+          <li><span class="ck">✓</span><div><h4>Padrão Mannol</h4><p>Primeira oficina parceira da marca alemã de óleos e fluidos em Brasília.</p></div></li>
+        </ul>
+      </div>
+      <div class="metodo-photos">
+        <img src="assets/fotos/dossie1.jpg" alt="Peça velha e nova na bancada" loading="lazy">
+        <div class="row">
+          <img src="assets/fotos/dossie2.jpg" alt="Dossiê Autogrado A4 impresso" loading="lazy">
+          <img src="assets/fotos/dossie3.jpg" alt="Plataforma de acompanhamento no celular" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVAS / CASES -->
+<section id="pacotes" class="pkg-band">
+  <div class="cf-wrap" id="cfWrap">
+    <div class="cf-sticky">
+      <div class="wrap">
+        <div class="section-head" style="text-align:center;max-width:680px;margin-left:auto;margin-right:auto">
+          <div class="eyebrow" style="justify-content:center">Pacotes por marca</div>
+          <h2>Revisão premium para o seu importado.</h2>
+          <p>Combos de revisão por marca, com tudo combinado antes de começar. Sem surpresa no fim.</p>
+        </div>
+      </div>
+      <div class="cf-track" id="cfTrack"></div>
+      <div class="cf-prog"><i id="cfProg"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARCAS -->
+<section class="brands">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center">Marcas que atendemos</div>
+    <h2>Especialistas em quem você dirige.</h2>
+    <div class="brand-grid">
+      <div class="brand-track">
+        <img src="assets/marcas/jeep.svg" alt="Jeep">
+        <img src="assets/marcas/audi.svg" alt="Audi">
+        <img src="assets/marcas/volkswagen.png" alt="Volkswagen">
+        <img src="assets/marcas/mercedes.png" alt="Mercedes-Benz">
+        <img src="assets/marcas/bmw.svg" alt="BMW">
+        <img src="assets/marcas/porsche.svg" alt="Porsche">
+      </div>
+      <div class="brand-track" aria-hidden="true">
+        <img src="assets/marcas/jeep.svg" alt="">
+        <img src="assets/marcas/audi.svg" alt="">
+        <img src="assets/marcas/volkswagen.png" alt="">
+        <img src="assets/marcas/mercedes.png" alt="">
+        <img src="assets/marcas/bmw.svg" alt="">
+        <img src="assets/marcas/porsche.svg" alt="">
+      </div>
+    </div>
+    <p class="brands-note">Não atendemos importações independentes (ex.: Alfa Romeo Giulia importado direto, Dodge Challenger Hellcat). Na dúvida, chame no WhatsApp.</p>
+  </div>
+</section>
+
+<!-- CONHEÇA A OFICINA -->
+<section id="oficina">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Por dentro da Autogrado</div>
+      <h2>Conheça a nossa oficina.</h2>
+      <p>Estrutura, equipe e método. Do jeito que você vai encontrar quando chegar em Vicente Pires.</p>
+    </div>
+    <div class="gal-carousel">
+    <button class="gal-nav gal-prev" id="galPrev" aria-label="Foto anterior">‹</button>
+    <div class="galeria" id="galTrack">
+      <figure class="gi"><img src="assets/fotos/oficina2.jpg" alt="Autogrado, por dentro da oficina" loading="lazy"><span class="gi-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6"/></svg></span></figure>
+      <figure class="gi"><img src="assets/fotos/oficina4.jpg" alt="Autogrado, por dentro da oficina" loading="lazy"><span class="gi-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6"/></svg></span></figure>
+      <figure class="gi"><img src="assets/fotos/oficina3.jpg" alt="Autogrado, por dentro da oficina" loading="lazy"><span class="gi-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6"/></svg></span></figure>
+      <figure class="gi"><img src="assets/fotos/site1.jpg" alt="Autogrado, por dentro da oficina" loading="lazy"><span class="gi-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6"/></svg></span></figure>
+      <figure class="gi"><img src="assets/fotos/site2.jpg" alt="Autogrado, por dentro da oficina" loading="lazy"><span class="gi-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6"/></svg></span></figure>
+      <figure class="gi"><img src="assets/fotos/site3.jpg" alt="Autogrado, por dentro da oficina" loading="lazy"><span class="gi-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6"/></svg></span></figure>
+      <figure class="gi"><img src="assets/fotos/oficina5.jpg" alt="Autogrado, por dentro da oficina" loading="lazy"><span class="gi-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6"/></svg></span></figure>
+      <figure class="gi"><img src="assets/fotos/oficina1.jpg" alt="Autogrado, por dentro da oficina" loading="lazy"><span class="gi-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6"/></svg></span></figure>
+      <figure class="gi"><img src="assets/fotos/oficina6.jpg" alt="Autogrado, por dentro da oficina" loading="lazy"><span class="gi-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6"/></svg></span></figure>
+      <figure class="gi"><img src="assets/fotos/revisao-premium2.jpg" alt="Autogrado, revisão premium" loading="lazy"><span class="gi-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6"/></svg></span></figure>
+    </div>
+    <button class="gal-nav gal-next" id="galNext" aria-label="Próxima foto">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="dark">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:24px">
+      <div class="eyebrow">O que dizem os clientes</div>
+      <h2>8 em cada 10 clientes voltam. Isso não é sorte, é método.</h2>
+    </div>
+    <div class="rev-rating">
+      <span class="score">4,9</span>
+      <div>
+        <div class="stars">★★★★★</div>
+        <span class="count">37 avaliações no Google</span>
+      </div>
+    </div>
+    <div class="rev-carousel">
+      <div class="rev-track" id="revTrack">
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Atende desde carro popular até alto padrão. Maquinário de primeira e os atendentes explicam muito bem tudo o que é feito no carro."</blockquote>
+          <div class="who"><span class="g">G</span> Ana Azevêdo · Local Guide</div>
+        </article>
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Levei meu veículo com barulhos estranhos na suspensão e queria saber com certeza o que era. Foi totalmente diagnosticado, com as falhas encontradas."</blockquote>
+          <div class="who"><span class="g">G</span> Rafael Lima · Google</div>
+        </article>
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <blockquote>"A Autogrado merece nota máxima. Realizei a revisão programada dos 120 mil km do meu veículo e recomendo."</blockquote>
+          <div class="who"><span class="g">G</span> Renan Luiz · Google</div>
+        </article>
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Fiz uma revisão geral no meu carro e a experiência foi nota 10."</blockquote>
+          <div class="who"><span class="g">G</span> Avaliação no Google</div>
+        </article>
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Ótimos profissionais, tratamento como nunca tinha visto igual."</blockquote>
+          <div class="who"><span class="g">G</span> Avaliação no Google</div>
+        </article>
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Ainda ganhei uma higienização do ar-condicionado e a troca do filtro de cortesia."</blockquote>
+          <div class="who"><span class="g">G</span> Avaliação no Google</div>
+        </article>
+      </div>
+    </div>
+    <div class="rev-foot">
+      <a href="https://maps.google.com/?cid=9387442666713786370" target="_blank" rel="noopener" class="btn btn-ghost">★ Ver todas as avaliações no Google</a>
+      <div class="rev-arrows">
+        <button class="rev-arrow" id="revPrev" aria-label="Anterior">‹</button>
+        <button class="rev-arrow" id="revNext" aria-label="Próximo">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA CHECK LIST -->
+<section style="padding-top:64px">
+  <div class="wrap">
+    <div class="oferta">
+      <div class="oferta-info">
+        <span class="badge">Vai viajar?</span>
+        <h3>Antes de pegar a estrada, faça o seu Check-list viagem.</h3>
+        <p>Check List Viagem Autogrado: 6 sistemas avaliados (elétrico, suspensão, ignição, freios, arrefecimento e motor), com laudo no WhatsApp e impresso em A4.</p>
+        <p style="color:var(--amber);font-weight:500">Achou algo? Você decide se corrige aqui, sem pressão.</p>
+      </div>
+      <div class="oferta-price">
+        <div class="pre">Preço fechado</div>
+        <div class="val">R$ 250</div>
+        <div class="desc">6 frentes · laudo digital + impresso</div>
+        <a href="https://wa.me/5561993104919?text=Ol%C3%A1!%20Quero%20agendar%20o%20Check%20List%20Viagem%20(R%24250)%20na%20Autogrado." target="_blank" rel="noopener" class="btn btn-primary btn-block"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Quero meu Check List</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM / LEAD -->
+<section id="agendar" class="lead dark">
+  <div class="wrap">
+    <div class="lead-grid">
+      <div class="lead-info">
+        <div class="eyebrow">Agende sua revisão</div>
+        <h2>Manda os dados. O dono te chama no WhatsApp.</h2>
+        <p style="font-size:1.1rem;margin-top:10px">Leva 30 segundos. Quem responde é a equipe, não um robô.</p>
+        <ul>
+          <li><span class="ck">✓</span> Resposta direta com os donos da oficina</li>
+          <li><span class="ck">✓</span> Orçamento transparente, item a item</li>
+          <li><span class="ck">✓</span> Garantia de 90 dias por escrito em todo serviço</li>
+          <li><span class="ck">✓</span> Atendimento de SEG a SEX, 8h às 18h</li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <h3>Solicitar atendimento</h3>
+        <p class="sub">Preencha e o botão abre o WhatsApp com sua mensagem pronta.</p>
+        <form id="leadForm" onsubmit="return enviarWhats(event)">
+          <div class="field"><label for="nome">Seu nome</label><input type="text" id="nome" name="nome" placeholder="Como podemos te chamar" required></div>
+          <div class="field"><label for="fone">Seu WhatsApp</label><input type="tel" id="fone" name="fone" placeholder="(61) 9 0000-0000" required></div>
+          <div class="field"><label for="carro">Modelo do carro</label><input type="text" id="carro" name="carro" placeholder="Ex.: Jeep Compass 2021" required></div>
+          <div class="field"><label for="servico">O que você precisa?</label>
+            <select id="servico" name="servico">
+              <option>Revisão completa</option>
+              <option>Check List Viagem (R$ 250)</option>
+              <option>Diagnóstico elétrico</option>
+              <option>Freios</option>
+              <option>Suspensão e direção</option>
+              <option>Arrefecimento</option>
+              <option>Ainda não sei / quero avaliar</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-wa btn-block btn-lg"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Enviar pelo WhatsApp</button>
+          <p class="form-note">Resposta em horário comercial · (61) 99310-4919</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div class="faq-media filled">
+        <picture>
+          <source media="(max-width:820px)" srcset="assets/fotos/oficina5.jpg">
+          <img src="assets/fotos/fachada-vertical-perguntas.jpg" alt="Fachada da Autogrado em Vicente Pires" loading="lazy">
+        </picture>
+      </div>
+      <div>
+        <div class="section-head" style="margin-bottom:24px">
+          <div class="eyebrow">Perguntas frequentes</div>
+          <h2>Antes de você perguntar.</h2>
+        </div>
+        <div class="faq">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Vocês aceitam peça que eu trouxer?<span class="pl">+</span></button>
+            <div class="faq-a"><p>Por princípio, não trabalhamos com peças trazidas pelo cliente. É um cuidado com a qualidade e a garantia do serviço. Peça errada ou de procedência duvidosa compromete o resultado e a sua segurança. Trabalhamos com peças que conseguimos garantir. Clientes antigos podem conversar sobre exceções.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Qual a garantia dos serviços?<span class="pl">+</span></button>
+            <div class="faq-a"><p>Todo serviço sai com garantia mínima de 90 dias, declarada por escrito. Você ainda recebe o Dossiê Autogrado impresso e mantém acesso ao histórico na plataforma por 2 anos.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Vocês atendem o meu carro?<span class="pl">+</span></button>
+            <div class="faq-a"><p>Atendemos BMW, Mercedes-Benz, Audi, Volkswagen, Jeep, Porsche e similares premium e nacionais. Não atendemos importações independentes (ex.: Alfa Romeo Giulia importado direto, Dodge Challenger Hellcat). Na dúvida, chame no WhatsApp e a gente confirma.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">O que é o Check List Viagem?<span class="pl">+</span></button>
+            <div class="faq-a"><p>É uma avaliação completa de 6 sistemas do carro (elétrico, suspensão, ignição, freios, arrefecimento e motor) por R$ 250, com preço fechado. Você recebe o laudo no WhatsApp e impresso. Se identificarmos algo, você decide se quer corrigir conosco, sem pressão.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Como acompanho o serviço do meu carro?<span class="pl">+</span></button>
+            <div class="faq-a"><p>Você recebe um link próprio da nossa plataforma e acompanha cada etapa em tempo real pelo celular, com fotos da entrada, das peças e do progresso. O acesso fica disponível por 2 anos.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZACAO / CONTATO -->
+<section id="contato" class="local">
+  <div class="wrap">
+    <div class="local-grid">
+      <div>
+        <div class="eyebrow">Onde estamos</div>
+        <h2>Vicente Pires, Brasília.</h2>
+        <p style="color:var(--g200);font-size:1.1rem;margin-top:8px">Pertinho de quem dirige bem: a poucos minutos de Águas Claras, Guará e Taguatinga.</p>
+        <div class="local-info">
+          <div class="row"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><h4>Endereço</h4><p>Vicente Pires · Chácara 104A, lote 33, loja 05, Brasília/DF</p></div></div>
+          <a class="row" href="tel:+5561993104919"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4.5h3l1.5 4-2 1.3a10 10 0 0 0 4.7 4.7l1.3-2 4 1.5v3a1.6 1.6 0 0 1-1.7 1.6A15 15 0 0 1 5 6.2 1.6 1.6 0 0 1 6.5 4.5z"/></svg></span><div><h4>Telefone / WhatsApp</h4><p>(61) 99310-4919</p></div></a>
+          <a class="row" href="mailto:autogrado.br@gmail.com"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><div><h4>E-mail</h4><p>autogrado.br@gmail.com</p></div></a>
+          <a class="row" href="https://www.instagram.com/autogrado.br/" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.7" cy="7.3" r="1.1" fill="currentColor" stroke="none"/></svg></span><div><h4>Instagram</h4><p>@autogrado.br</p></div></a>
+          <div class="row"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><div><h4>Horário</h4><p>Segunda a sexta, 8h às 18h</p></div></div>
+        </div>
+        <div class="local-cta">
+          <a href="https://www.google.com/maps/search/?api=1&query=Autogrado+Vicente+Pires+Bras%C3%ADlia" target="_blank" rel="noopener" class="btn btn-primary">Como chegar</a>
+        </div>
+      </div>
+      <div style="border-radius:var(--rl);overflow:hidden;min-height:360px;height:100%;border:1px solid var(--g600)">
+        <iframe src="https://www.google.com/maps?q=Autogrado%20-%20oficina%20mec%C3%A2nica%2C%20Vicente%20Pires%2C%20Bras%C3%ADlia&output=embed" title="Localização da Autogrado em Vicente Pires" style="width:100%;height:100%;min-height:360px;border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <img src="assets/logo-autogrado-amarelo-transparente.png" alt="Autogrado">
+        <p>Oficina premium para SUVs e importados. O cuidado de concessionária, com a atenção que ela não te dá.</p>
+      </div>
+      <div class="foot-col">
+        <div class="foot-links" style="flex-direction:column;gap:10px">
+          <a href="#servicos">Serviços</a>
+          <a href="#processo">Processo</a>
+          <a href="#pacotes">Pacotes</a>
+          <a href="#faq">Perguntas frequentes</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <div class="foot-links" style="flex-direction:column;gap:10px">
+          <a href="tel:+5561993104919">(61) 99310-4919</a>
+          <a href="mailto:autogrado.br@gmail.com">autogrado.br@gmail.com</a>
+          <a href="https://maps.google.com/?cid=9387442666713786370" target="_blank" rel="noopener">Avaliações no Google</a>
+          <a href="https://www.instagram.com/autogrado.br/" target="_blank" rel="noopener">Instagram @autogrado.br</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Autogrado do Brasil LTDA · Vicente Pires/DF</span>
+      <span class="foot-legal"><a href="termos-de-uso.html">Termos de uso</a> · <a href="politica-de-privacidade.html">Política de privacidade</a> · <a href="#" data-cookie-prefs>Preferências de cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="cta-fixed" id="ctaFixed">
+  <div class="cf-txt">Revisão premium pro seu importado<small>Diagnóstico transparente, do início ao fim</small></div>
+  <a href="#agendar" class="btn btn-primary">Agendar minha revisão</a>
+</div>
+
+<a href="https://wa.me/5561993104919?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Autogrado." target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+
+<div id="cookie" class="cookie" hidden role="region" aria-label="Aviso de cookies">
+  <p>Usamos cookies para o site funcionar, medir desempenho e personalizar anúncios (Meta e Google). Você decide o que aceitar. Detalhes na <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+  <div class="acts">
+    <button type="button" class="btn ck-ghost" id="ckManage">Gerenciar</button>
+    <button type="button" class="btn ck-deny" id="ckDeny">Recusar</button>
+    <button type="button" class="btn btn-primary" id="ckAccept">Aceitar</button>
+  </div>
+</div>
+
+<div id="ckModal" class="ck-modal" hidden>
+  <div class="ck-modal-bg" data-ckclose></div>
+  <div class="ck-modal-card" role="dialog" aria-modal="true" aria-labelledby="ckTitle">
+    <button class="ck-x" data-ckclose aria-label="Fechar">&times;</button>
+    <h3 id="ckTitle">Preferências de cookies</h3>
+    <p class="ck-intro">Controle como seus dados são usados. Os cookies necessários são essenciais e ficam sempre ativos.</p>
+    <div class="ck-cat">
+      <div class="ck-cat-head"><strong>Necessários</strong><span class="ck-always">Sempre ativos</span></div>
+      <p>Essenciais para o funcionamento do site: navegação, segurança e o registro da sua escolha de cookies.</p>
+    </div>
+    <div class="ck-cat">
+      <div class="ck-cat-head"><strong>Desempenho / Analytics</strong>
+        <label class="ck-switch"><input type="checkbox" id="ckAnalytics"><span class="ck-slider"></span></label>
+      </div>
+      <p>Métricas de uso (ex.: Google Analytics) para entendermos o que melhorar no site.</p>
+    </div>
+    <div class="ck-cat">
+      <div class="ck-cat-head"><strong>Marketing</strong>
+        <label class="ck-switch"><input type="checkbox" id="ckMarketing"><span class="ck-slider"></span></label>
+      </div>
+      <p>Cookies de Meta Ads e Google Ads para medir campanhas e exibir anúncios relevantes.</p>
+    </div>
+    <div class="ck-modal-acts">
+      <button type="button" class="btn ck-deny" id="ckRejectAll">Recusar tudo</button>
+      <button type="button" class="btn ck-ghost" id="ckSave">Salvar escolhas</button>
+      <button type="button" class="btn btn-primary" id="ckAcceptAll">Aceitar tudo</button>
+    </div>
+  </div>
+</div>
+
+<div id="vmodal" class="vmodal" hidden>
+  <div class="vmodal-bg" data-close></div>
+  <div class="vmodal-card">
+    <button class="vmodal-x" data-close aria-label="Fechar">&times;</button>
+    <div class="vmodal-player" id="vmodalPlayer">
+      <!-- Quando o vídeo estiver no YouTube, defina o ID em YT_ID no script abaixo. -->
+      <div class="video-ph">
+        <div class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="t">Vídeo institucional do YouTube aqui</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Menu mobile: abre/fecha o painel e anima o hamburger */
+(function(){
+  var t=document.getElementById('navToggle'),m=document.getElementById('navMobile');
+  if(!t||!m)return;
+  function toggle(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');}
+  function close(){m.classList.remove('open');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Abrir menu');}
+  t.addEventListener('click',toggle);
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+})();
+/* Nav colapsa para o hamburger quando o espaço entre os itens ficaria menor que 16px */
+(function(){
+  var nav=document.querySelector('.nav'); if(!nav) return;
+  var links=nav.querySelector('.nav-links'); if(!links) return;
+  var items=links.querySelectorAll('a'); if(!items.length) return;
+  var GAP=16, CLEAR=16;
+  function expand(){
+    nav.classList.remove('collapsed');
+    var m=document.getElementById('navMobile'),t=document.getElementById('navToggle');
+    if(m) m.classList.remove('open');
+    if(t){ t.setAttribute('aria-expanded','false'); t.setAttribute('aria-label','Abrir menu'); }
+  }
+  function evaluate(){
+    // Desktop (>=1025): FORA dos breakdowns tablet/mobile, nunca colapsa, mantém o menu completo
+    if(window.innerWidth>=1025){ expand(); return; }
+    // No mobile (<=900) o CSS já força o hamburger: não medir (evita churn da classe measuring e proteger o toggle)
+    if(window.innerWidth<=900){ nav.classList.add('collapsed'); return; }
+    // Mede com tudo visível (measuring): itens travados na largura do container; logo/CTA nas bordas
+    var firstL,lastR,minGap=Infinity,logoR,ctaL;
+    nav.classList.add('measuring');
+    try{
+      var logo=document.querySelector('.nav-logo'), cta=document.querySelector('.nav-cta');
+      logoR=logo?logo.getBoundingClientRect().right:0;
+      ctaL=cta?cta.getBoundingClientRect().left:window.innerWidth;
+      firstL=items[0].getBoundingClientRect().left;
+      lastR=items[items.length-1].getBoundingClientRect().right;
+      for(var i=1;i<items.length;i++){ var g=items[i].getBoundingClientRect().left-items[i-1].getBoundingClientRect().right; if(g<minGap)minGap=g; }
+    } finally { nav.classList.remove('measuring'); }
+    // cabe se: itens não invadem logo nem CTA (folga >= CLEAR) e o espaço entre itens >= 16px
+    var fits = firstL >= logoR+CLEAR && lastR <= ctaL-CLEAR && minGap >= GAP;
+    if(fits){ expand(); } else { nav.classList.add('collapsed'); }
+  }
+  evaluate();
+  if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(evaluate); }
+  var rt; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(evaluate,80); },{passive:true});
+})();
+/* Consentimento de cookies (LGPD): persiste a escolha, aplica Google Consent Mode v2
+   e SÓ ativa scripts de rastreamento marcados quando a categoria for consentida.
+   Para plugar Meta Pixel / GA4 / Google Ads, adicione o script assim (fica inerte até o consentimento):
+     <script type="text/plain" data-cookie="marketing"> ...código do pixel... <\/script>
+     <script type="text/plain" data-cookie="analytics"> ...código do GA4... <\/script>
+*/
+(function(){
+  var KEY='ag_consent', VER=1;
+  var banner=document.getElementById('cookie'), modal=document.getElementById('ckModal');
+  if(!banner) return;
+  var elA=document.getElementById('ckAnalytics'), elM=document.getElementById('ckMarketing');
+  function gtag(){window.dataLayer=window.dataLayer||[];dataLayer.push(arguments);}
+  function read(){ try{var s=JSON.parse(localStorage.getItem(KEY));return (s&&s.v===VER)?s:null;}catch(e){return null;} }
+  function persist(c){ try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){} }
+  function applyMode(c){
+    gtag('consent','update',{
+      analytics_storage:c.analytics?'granted':'denied',
+      ad_storage:c.marketing?'granted':'denied',
+      ad_user_data:c.marketing?'granted':'denied',
+      ad_personalization:c.marketing?'granted':'denied'
+    });
+  }
+  function activate(c){
+    document.querySelectorAll('script[type="text/plain"][data-cookie]').forEach(function(s){
+      var cat=s.getAttribute('data-cookie');
+      if((cat==='analytics'&&c.analytics)||(cat==='marketing'&&c.marketing)){
+        var n=document.createElement('script');
+        if(s.src){ n.src=s.src; } else { n.text=s.textContent; }
+        for(var i=0;i<s.attributes.length;i++){ var at=s.attributes[i]; if(at.name!=='type'&&at.name!=='data-cookie') n.setAttribute(at.name,at.value); }
+        s.parentNode.replaceChild(n,s);
+      }
+    });
+  }
+  function apply(c){ applyMode(c); activate(c); }
+  function openModal(){ if(elA)elA.checked=!!cur.analytics; if(elM)elM.checked=!!cur.marketing; if(modal){modal.hidden=false;document.body.style.overflow='hidden';} }
+  function closeModal(){ if(modal){modal.hidden=true;document.body.style.overflow='';} }
+  function commit(c){ c.v=VER;c.necessary=true;c.ts=Date.now();cur=c;persist(c);apply(c);banner.hidden=true;closeModal(); }
+
+  var stored=read();
+  var cur = stored || {v:VER,necessary:true,analytics:false,marketing:false};
+  if(stored){ apply(stored); } else { banner.hidden=false; }
+
+  var b;
+  if(b=document.getElementById('ckAccept'))   b.addEventListener('click',function(){commit({analytics:true,marketing:true});});
+  if(b=document.getElementById('ckDeny'))     b.addEventListener('click',function(){commit({analytics:false,marketing:false});});
+  if(b=document.getElementById('ckManage'))   b.addEventListener('click',openModal);
+  if(b=document.getElementById('ckAcceptAll'))b.addEventListener('click',function(){commit({analytics:true,marketing:true});});
+  if(b=document.getElementById('ckRejectAll'))b.addEventListener('click',function(){commit({analytics:false,marketing:false});});
+  if(b=document.getElementById('ckSave'))     b.addEventListener('click',function(){commit({analytics:!!(elA&&elA.checked),marketing:!!(elM&&elM.checked)});});
+  if(modal) modal.querySelectorAll('[data-ckclose]').forEach(function(x){x.addEventListener('click',closeModal);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal&&!modal.hidden)closeModal();});
+  /* Qualquer elemento com data-cookie-prefs reabre as preferências (ex.: link no rodapé) */
+  document.querySelectorAll('[data-cookie-prefs]').forEach(function(el){el.addEventListener('click',function(e){e.preventDefault();openModal();});});
+})();
+/* Cole aqui o ID do vídeo institucional do YouTube (ex.: "dQw4w9WgXcQ") */
+var YT_ID="";
+(function(){
+  var modal=document.getElementById('vmodal'),player=document.getElementById('vmodalPlayer');
+  var ph=player.innerHTML;
+  function open(){
+    if(YT_ID){player.innerHTML='<iframe src="https://www.youtube.com/embed/'+YT_ID+'?autoplay=1&rel=0" title="Autogrado · Vídeo institucional" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';}
+    modal.hidden=false;document.body.style.overflow='hidden';
+  }
+  function close(){modal.hidden=true;document.body.style.overflow='';player.innerHTML=ph;}
+  document.querySelectorAll('[data-openvideo]').forEach(function(b){b.addEventListener('click',open);});
+  modal.querySelectorAll('[data-close]').forEach(function(x){x.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)close();});
+})();
+function enviarWhats(e){
+  e.preventDefault();
+  var nome=document.getElementById('nome').value.trim();
+  var fone=document.getElementById('fone').value.trim();
+  var carro=document.getElementById('carro').value.trim();
+  var serv=document.getElementById('servico').value;
+  var msg='Olá, sou '+nome+', meu carro é um '+carro+' e preciso de '+serv+'. Poderia me passar mais informações?\nMeu WhatsApp para contato: '+fone;
+  window.open('https://wa.me/5561993104919?text='+encodeURIComponent(msg),'_blank');
+  return false;
+}
+(function(){
+  var track=document.getElementById('revTrack');
+  if(!track)return;
+  function step(){var c=track.querySelector('.review');return c?c.getBoundingClientRect().width+22:320;}
+  var p=document.getElementById('revPrev'),n=document.getElementById('revNext');
+  if(n)n.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
+  if(p)p.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});
+})();
+/* Combos · coverflow 3D pinado (desktop) + empilhado no mobile */
+(function(){
+  var track=document.getElementById('cfTrack'); if(!track) return;
+  var wrap=document.getElementById('cfWrap'), prog=document.getElementById('cfProg');
+  var COMBOS=[
+   {b:'Jeep',m:'Compass · Renegade · Commander',img:'assets/image_jeep.jpg',w:'o meu Jeep'},
+   {b:'Audi',m:'A1 · A3 · A4 · A5 · A6 · Q3 · Q5 · Q6 · Q7 · Q8',img:'assets/image_audi.jpg',w:'o meu Audi'},
+   {b:'Volkswagen',m:'Tiguan · T-Cross · Jetta · Golf · Taos',img:'assets/image_volkswagen.jpg',w:'o meu Volkswagen'},
+   {b:'Mercedes-Benz',m:'Classe C · CLA · GLA · GLB · GLC · GLE · GLS · Classe S',img:'assets/image_mercedes.jpg',w:'a minha Mercedes-Benz'},
+   {b:'BMW',m:'116 · 118 · 120 · 320 · X1 · X2 · X3 · X4 · X5 · X6',img:'assets/image_bmw.jpg',w:'o meu BMW'},
+   {b:'Porsche',m:'Macan · Cayenne · Panamera · 911 · 718',img:'assets/image_porsche.jpg',w:'o meu Porsche'}
+  ];
+  var ITEMS=['Óleo do motor','Filtro de óleo','Filtro de ar','Filtro de ar condicionado','Check-list elétrico','Check-list Motor e Ignição','Check-list Suspensão e Freios'];
+  var CK='<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
+  function wa(t){return 'https://wa.me/5561993104919?text='+encodeURIComponent(t);}
+  var cards=COMBOS.map(function(c){
+    var el=document.createElement('a'); el.className='cf-card';
+    el.href=wa('Olá! Tenho interesse em uma revisão premium para '+c.w+'. Poderia me dar mais informações?');
+    el.target='_blank'; el.rel='noopener'; el.draggable=false; el.setAttribute('aria-label','Falar sobre revisão premium '+c.b+' no WhatsApp');
+    var feat=ITEMS.map(function(t){return '<span>'+CK+t+'</span>';}).join('');
+    el.innerHTML='<div class="cf-bg" style="background-image:url('+c.img+')"></div><div class="cf-in"><div class="cf-e">Revisão premium</div><div class="cf-brand">'+c.b+'</div><div class="cf-models">'+c.m+'</div><div class="cf-feat">'+feat+'</div><span class="cf-cta">Quero revisar</span></div>';
+    track.appendChild(el); return el;
+  });
+  /* Desktop: o transform 3D (rotateY/preserve-3d) desloca a área de clique nativa de alguns
+     cards. Handler delegado usa getBoundingClientRect (preciso) pra achar o card sob o cursor
+     e abrir o link, assim TODOS os cards são clicáveis onde estão visíveis, centralizados ou não. */
+  var sticky=wrap.querySelector('.cf-sticky');
+  if(sticky){ sticky.addEventListener('click',function(ev){
+    if(mq.matches) return;                    // mobile empilhado: links nativos funcionam
+    var x=ev.clientX,y=ev.clientY,hit=null,bestZ=-1;
+    cards.forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom){
+        var z=parseInt(el.style.zIndex||'0',10);
+        if(z>=bestZ){bestZ=z;hit=el;}
+      }
+    });
+    if(hit){ ev.preventDefault(); window.open(hit.href,'_blank','noopener'); }
+  },true); }
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches, mq=matchMedia('(max-width:860px)');
+  function distance(){ var L=cards[cards.length-1]; return Math.max(0, L.offsetLeft + L.offsetWidth/2 - window.innerWidth/2); } /* scroll até o ÚLTIMO card (Porsche) centralizar */
+  function setH(){ if(mq.matches){wrap.style.height='auto';track.style.transform='';return;} wrap.style.height=(window.innerHeight+distance())+'px'; }
+  function update(){
+    if(mq.matches) return;
+    var rect=wrap.getBoundingClientRect(), total=wrap.offsetHeight-window.innerHeight;
+    var p=Math.min(1,Math.max(0,(-rect.top)/total));
+    var dist=distance();
+    track.style.transform='translateX('+(-p*dist).toFixed(1)+'px)';
+    var vw=window.innerWidth;
+    cards.forEach(function(el){
+      var r=el.getBoundingClientRect(); var center=(r.left+r.width/2-vw/2)/vw; var cc=Math.max(-1.3,Math.min(1.3,center));
+      if(!reduce){ var rot=cc*-32, sc=1-Math.min(.2,Math.abs(cc)*.22), tz=-Math.abs(cc)*120, op=1-Math.min(.55,Math.abs(cc)*.6);
+        el.style.transform='translateZ('+tz.toFixed(0)+'px) rotateY('+rot.toFixed(1)+'deg) scale('+sc.toFixed(3)+')';
+        el.style.opacity=op.toFixed(3); el.style.zIndex=Math.round(100-Math.abs(cc)*50);
+      }
+    });
+    if(prog) prog.style.width=(p*100).toFixed(1)+'%';
+  }
+  var tk=false; function s(){ if(!tk){requestAnimationFrame(function(){update();tk=false;});tk=true;} }
+  window.addEventListener('scroll',s,{passive:true});
+  window.addEventListener('resize',function(){setH();update();},{passive:true});
+  setH(); update();
+})();
+document.querySelectorAll('.faq-q').forEach(function(b){
+  b.addEventListener('click',function(){
+    var open=b.getAttribute('aria-expanded')==='true';
+    var a=b.nextElementSibling;
+    b.setAttribute('aria-expanded',!open);
+    a.style.maxHeight=open?null:a.scrollHeight+'px';
+  });
+});
+/* ===== MOVIMENTO: scroll-reveal, count-up, parallax e tilt do card ===== */
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduce) return; // respeita quem desativou animações
+  document.documentElement.classList.add('js-anim');
+  var mqDesktop = window.matchMedia('(min-width:1025px)');
+  var mqFinePointer = window.matchMedia('(hover:hover) and (pointer:fine)');
+  try{
+
+  /* 1) SCROLL-REVEAL */
+  var revealSel=['.section-head','.feat','.serv','.proc-step','.metodo-grid > div','.metodo-photos','.galeria .ph','.oferta','.faq-item','.faq-media','.local-grid > *','.foot-col','.rev-rating'];
+  revealSel.forEach(function(s){document.querySelectorAll(s).forEach(function(el){el.classList.add('reveal');});});
+  // stagger por posição entre irmãos que também são reveal
+  document.querySelectorAll('.reveal').forEach(function(el){
+    var sibs=Array.prototype.filter.call(el.parentNode.children,function(c){return c.classList.contains('reveal');});
+    var i=sibs.indexOf(el);
+    if(i>0) el.classList.add('d'+Math.min(i,4));
+  });
+  var revealEls=Array.prototype.slice.call(document.querySelectorAll('.reveal')), rTick=false;
+  function revealCheck(){
+    var vh=window.innerHeight, rest=[];
+    revealEls.forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if((r.top < vh*0.9 || r.bottom < vh) && r.bottom > 0){ el.classList.add('in'); } else { rest.push(el); }
+    });
+    revealEls=rest; rTick=false;
+  }
+  function onRevealScroll(){ if(!rTick){ requestAnimationFrame(revealCheck); rTick=true; } }
+  window.addEventListener('scroll',onRevealScroll,{passive:true});
+  window.addEventListener('resize',onRevealScroll,{passive:true});
+  revealCheck();
+
+  /* 2) COUNT-UP nos números do hero */
+  function countUp(el){
+    var raw=el.getAttribute('data-num')||el.textContent;
+    el.setAttribute('data-num',raw);
+    var m=raw.match(/(\d+(?:[.,]\d+)?)/); if(!m) return;
+    var numStr=m[1], dec=(numStr.indexOf(',')>-1||numStr.indexOf('.')>-1), sep=numStr.indexOf(',')>-1?',':'.';
+    var target=parseFloat(numStr.replace(',','.')), start=performance.now(), dur=1100;
+    function frame(t){
+      var p=Math.min((t-start)/dur,1), ease=1-Math.pow(1-p,3), val=target*ease;
+      var shown=dec?val.toFixed(1).replace('.',sep):Math.round(val).toString();
+      el.textContent=raw.replace(numStr,shown);
+      if(p<1) requestAnimationFrame(frame); else el.textContent=raw;
+    }
+    requestAnimationFrame(frame);
+  }
+  var trust=document.querySelector('.hero-trust');
+  if(trust){
+    var tio=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.querySelectorAll('.n').forEach(countUp); tio.disconnect(); } });
+    },{threshold:0.4});
+    tio.observe(trust);
+  }
+
+  /* 3) PARALLAX (desligado no mobile) */
+  function setupParallax(){
+    if(window.innerWidth<=860) return null;
+    document.querySelectorAll('.pkg-img img').forEach(function(e){e.setAttribute('data-parallax','0.05');e.setAttribute('data-pscale','1.08');});
+    var pEls=Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+    var hero=document.querySelector('.hero'), hVideo=document.querySelector('.hero-video'), hContent=document.querySelector('.hero-content');
+    var ticking=false;
+    function update(){
+      var vh=window.innerHeight, y=window.pageYOffset;
+      pEls.forEach(function(el){
+        var r=el.getBoundingClientRect(), center=r.top+r.height/2, prog=(center-vh/2)/vh;
+        var sp=parseFloat(el.getAttribute('data-parallax'))||0.1, sc=el.getAttribute('data-pscale');
+        el.style.transform='translate3d(0,'+(prog*sp*-100).toFixed(1)+'px,0)'+(sc?' scale('+sc+')':'');
+      });
+      if(hero){
+        var hr=hero.getBoundingClientRect();
+        if(hr.bottom>0){
+          if(hVideo) hVideo.style.transform='translate3d(0,'+(y*0.28).toFixed(1)+'px,0) scale(1.18)';
+          if(hContent){ hContent.style.transform='translate3d(0,'+(y*0.12).toFixed(1)+'px,0)'; hContent.style.opacity=Math.max(0,1-y/vh*1.1).toFixed(2); }
+        }
+      }
+      ticking=false;
+    }
+    function onScroll(){ if(!ticking){ requestAnimationFrame(update); ticking=true; } }
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',onScroll,{passive:true});
+    update();
+    return true;
+  }
+  setupParallax();
+
+  /* 4) TILT do card de vídeo do hero (só desktop, ponteiro fino) */
+  var card=document.querySelector('.hero-watch');
+  if(card && mqDesktop.matches && mqFinePointer.matches){
+    card.addEventListener('mousemove',function(e){
+      var r=card.getBoundingClientRect();
+      var px=(e.clientX-r.left)/r.width-0.5, py=(e.clientY-r.top)/r.height-0.5;
+      card.style.transform='perspective(900px) rotateY('+(px*6).toFixed(2)+'deg) rotateX('+(-py*6).toFixed(2)+'deg) scale(1.02)';
+    });
+    card.addEventListener('mouseleave',function(){ card.style.transform=''; });
+  }
+
+  }catch(err){
+    /* Falha de animação nunca pode esconder conteúdo: volta tudo ao estado estático */
+    document.documentElement.classList.remove('js-anim');
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+  }
+  /* Rede de segurança: garante visibilidade caso algum reveal não dispare */
+  setTimeout(function(){ document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ var r=el.getBoundingClientRect(); if(r.top<window.innerHeight){ el.classList.add('in'); } }); },2500);
+})();
+</script>
+<!-- LIGHTBOX GALERIA -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria da oficina">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Fechar">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Foto anterior">‹</button>
+  <div class="lb-stage"><img id="lbImg" src="" alt=""></div>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Próxima foto">›</button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+<script>
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('.galeria img'));
+  if(!imgs.length)return;
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbCount=document.getElementById('lbCount'),idx=0;
+  function show(i){idx=(i+imgs.length)%imgs.length;var s=imgs[idx];lbImg.src=s.currentSrc||s.src;lbImg.alt=s.alt||'';lbCount.textContent=(idx+1)+' / '+imgs.length;}
+  function open(i){show(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';}
+  imgs.forEach(function(im,i){im.setAttribute('role','button');im.setAttribute('tabindex','0');im.addEventListener('click',function(){open(i);});im.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i);}});});
+  document.getElementById('lbNext').addEventListener('click',function(e){e.stopPropagation();show(idx+1);});
+  document.getElementById('lbPrev').addEventListener('click',function(e){e.stopPropagation();show(idx-1);});
+  document.getElementById('lbClose').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb-stage'))close();});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')show(idx+1);else if(e.key==='ArrowLeft')show(idx-1);});
+
+  // carrossel, setas
+  var track=document.getElementById('galTrack');
+  function stepW(){var c=track&&track.querySelector('.gi');return c?c.getBoundingClientRect().width+14:320;}
+  var gp=document.getElementById('galPrev'),gn=document.getElementById('galNext');
+  gp&&gp.addEventListener('click',function(){track.scrollBy({left:-stepW(),behavior:'smooth'});});
+  gn&&gn.addEventListener('click',function(){track.scrollBy({left:stepW(),behavior:'smooth'});});
+
+  // CTA fixo inferior
+  var ctaFixed=document.getElementById('ctaFixed'),agendar=document.getElementById('agendar');
+  var cookie=document.getElementById('cookie');
+  function onScr(){
+    var past=window.scrollY>window.innerHeight*0.85, formVis=false;
+    if(agendar){var r=agendar.getBoundingClientRect();formVis=r.top<window.innerHeight*0.85 && r.bottom>0;}
+    var ckVis=cookie && !cookie.hidden && getComputedStyle(cookie).display!=='none';
+    var show=past&&!formVis&&!ckVis;
+    ctaFixed.classList.toggle('show',show);
+    document.body.classList.toggle('cta-shown',show);
+  }
+  addEventListener('scroll',onScr,{passive:true});addEventListener('resize',onScr);onScr();
+  cookie&&cookie.addEventListener('click',function(){setTimeout(onScr,60);});
+
+  // CTAs dentro das dobras (desktop; escondidos no mobile via CSS)
+  ['servicos','metodo','oficina'].forEach(function(id){
+    var sec=document.getElementById(id); if(!sec)return;
+    var wrap=sec.querySelector('.wrap')||sec;
+    var d=document.createElement('div'); d.className='sec-cta';
+    d.innerHTML='<a href="#agendar" class="btn btn-primary btn-lg">Agendar minha revisão</a>';
+    wrap.appendChild(d);
+  });
+})();
+</script>
+</body>
+</html>

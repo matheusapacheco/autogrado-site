@@ -1,0 +1,34 @@
+name: Publicar site no Hostinger
+
+# Sobe automaticamente pro Hostinger toda vez que houver mudanca na branch main.
+# As credenciais ficam nos "Secrets" do repositorio (Settings > Secrets and variables > Actions).
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:   # permite publicar manualmente pelo botao "Run workflow" no GitHub
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar os arquivos do repositorio
+        uses: actions/checkout@v4
+
+      - name: Enviar por FTP para o Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          protocol: ftps
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          local-dir: ./
+          # Nao envia arquivos internos do repositorio pro servidor:
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            README.md
+            .gitignore
+            LEIA-ME*.txt
