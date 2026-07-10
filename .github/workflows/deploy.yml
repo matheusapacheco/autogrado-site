@@ -1,35 +1,25 @@
 name: Publicar site no Hostinger
 
-# Sobe automaticamente pro Hostinger toda vez que houver mudanca na branch main.
-# As credenciais ficam nos "Secrets" do repositorio (Settings > Secrets and variables > Actions).
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:   # permite publicar manualmente pelo botao "Run workflow" no GitHub
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Baixar os arquivos do repositorio
+      - name: Baixar arquivos do repositorio
         uses: actions/checkout@v4
 
-      - name: Enviar por FTP para o Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ftps
-          server-dir: domains/autogrado.com.br/public_html/
-          local-dir: ./
-          dangerous-clean-slate: true
-          # Nao envia arquivos internos do repositorio pro servidor:
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            README.md
-            .gitignore
-            LEIA-ME*.txt
+      - name: Instalar lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y lftp -qq
+
+      - name: Sincronizar com o Hostinger (lftp mirror)
+        env:
+          H: ${{ secrets.FTP_HOST }}
+          U: ${{ secrets.FTP_USERNAME }}
+          P: ${{ secrets.FTP_PASSWORD }}
+          PT: ${{ secrets.FTP_PORT }}
+        run: |
+          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:max-retries 2; set net:timeout 20; mirror -R --delete --verbose --exclude-glob .git* --exclude .github/ --exclude-glob README.md --exclude-glob 'LEIA-ME*' --exclude-glob .gitignore --exclude-glob .ftp-deploy-sync-state.json ./ domains/autogrado.com.br/public_html/; bye"
