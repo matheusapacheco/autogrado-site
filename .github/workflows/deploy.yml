@@ -11,11 +11,12 @@ jobs:
     steps:
       - name: Instalar lftp
         run: sudo apt-get update -qq && sudo apt-get install -y lftp -qq
-      - name: Explorar acima do login
+      - name: Testar caminho absoluto do webroot
         env:
           H: ${{ secrets.FTP_HOST }}
           U: ${{ secrets.FTP_USERNAME }}
           P: ${{ secrets.FTP_PASSWORD }}
           PT: ${{ secrets.FTP_PORT }}
         run: |
-          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:timeout 15; echo '=PWD='; quote PWD; echo '=SOBE 1 (cd ..)='; cd ..; quote PWD; ls; echo '=SOBE 2 (cd ../..)='; cd ..; quote PWD; ls; bye" 2>&1 || true
+          printf 'REAL' > x.txt
+          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:timeout 15; echo '=PUT='; put x.txt -o /domains/autogrado.com.br/public_html/zzz-real.txt; echo '=LS WEBROOT='; ls /domains/autogrado.com.br/public_html/; bye" 2>&1 || true
