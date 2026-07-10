@@ -9,16 +9,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Instalar lftp
-        run: sudo apt-get update -qq && sudo apt-get install -y lftp -qq
-
-      - name: Descobrir webroot
+      - name: Comparar servidor do FTP x do dominio
         env:
           H: ${{ secrets.FTP_HOST }}
-          U: ${{ secrets.FTP_USERNAME }}
-          P: ${{ secrets.FTP_PASSWORD }}
-          PT: ${{ secrets.FTP_PORT }}
-          SD: ${{ secrets.FTP_SERVER_DIR }}
         run: |
-          printf 'SDTEST' > x.txt
-          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:timeout 15; echo '=== onde o FTP cai (PWD) ==='; quote PWD; echo '=== secret SD conteudo ==='; ls \"$SD\" 2>&1 | head -20; echo '=== put marcador no SD ==='; put x.txt -o \"$SD/zzz-sd.txt\" 2>&1; echo '=== ls files/ ==='; ls files/ 2>&1 | head; echo '=== ls files/public_html/ ==='; ls files/public_html/ 2>&1 | head; bye" 2>&1 || true
+          DOMAIN_IP=$(getent hosts autogrado.com.br | awk '{print $1}' | head -1)
+          FTP_IP=$(getent hosts "$H" | awk '{print $1}' | head -1)
+          [ -z "$FTP_IP" ] && FTP_IP="$H"
+          echo "IP do dominio autogrado.com.br: $DOMAIN_IP"
+          echo "IP do FTP resolvido:            $FTP_IP"
+          if [ "$FTP_IP" = "$DOMAIN_IP" ]; then
+            echo "RESULTADO: MESMO servidor (problema e de caminho/config)"
+          else
+            echo "RESULTADO: SERVIDORES DIFERENTES (a conta FTP nao e a que serve o site)"
+          fi
