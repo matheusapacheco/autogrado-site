@@ -1,6 +1,5 @@
 name: Publicar site no Hostinger
 
-# Publica automaticamente no Hostinger a cada mudanca na branch main.
 on:
   push:
     branches: [ main ]
@@ -10,24 +9,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Baixar arquivos do repositorio
-        uses: actions/checkout@v4
-
-      - name: Enviar por FTP para o Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ftps
-          server-dir: /domains/autogrado.com.br/public_html/
-          local-dir: ./
-          dangerous-clean-slate: true
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            README.md
-            .gitignore
-            LEIA-ME*.txt
+      - name: Instalar lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y lftp -qq
+      - name: Limpar entulho em /public_html (sem tocar no site real)
+        env:
+          H: ${{ secrets.FTP_HOST }}
+          U: ${{ secrets.FTP_USERNAME }}
+          P: ${{ secrets.FTP_PASSWORD }}
+          PT: ${{ secrets.FTP_PORT }}
+        run: |
+          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:timeout 20; echo '=ANTES /public_html='; ls -a /public_html/; echo '=LIMPANDO='; rm -rf /public_html/assets; rm -rf /public_html/domains; rm -rf /public_html/public_html; rm -f /public_html/index.html; rm -f /public_html/politica-de-privacidade.html; rm -f /public_html/termos-de-uso.html; rm -f /public_html/.htaccess; rm -f /public_html/.ftp-deploy-sync-state.json; rm -f /public_html/zzz-raiz.txt; rm -f /public_html/zzz-sd.txt; echo '=DEPOIS /public_html='; ls -a /public_html/; echo '=WEBROOT REAL (deve ter a landing)='; ls /domains/autogrado.com.br/public_html/ | head; bye" 2>&1 || true
