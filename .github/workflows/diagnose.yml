@@ -12,4 +12,4 @@ jobs:
           PT: ${{ secrets.FTP_PORT }}
         run: |
           sudo apt-get update -qq && sudo apt-get install -y lftp -qq
-          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; echo '>>> PWD:'; pwd; echo '>>> LS(login):'; ls; echo '>>> FIND 2 niveis:'; find -d 2; bye" 2>&1 || true
+          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; echo '=== domains/ ==='; ls domains/; echo '=== domains/autogrado.com.br/public_html/ ==='; ls domains/autogrado.com.br/public_html/; echo '=== public_html/ (da raiz) ==='; ls public_html/; bye" 2>&1 || true
