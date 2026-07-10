@@ -1,5 +1,6 @@
 name: Publicar site no Hostinger
 
+# Publica automaticamente no Hostinger a cada mudanca na branch main.
 on:
   push:
     branches: [ main ]
@@ -9,14 +10,24 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Instalar lftp
-        run: sudo apt-get update -qq && sudo apt-get install -y lftp -qq
-      - name: Testar caminho absoluto do webroot
-        env:
-          H: ${{ secrets.FTP_HOST }}
-          U: ${{ secrets.FTP_USERNAME }}
-          P: ${{ secrets.FTP_PASSWORD }}
-          PT: ${{ secrets.FTP_PORT }}
-        run: |
-          printf 'REAL' > x.txt
-          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:timeout 15; echo '=PUT='; put x.txt -o /domains/autogrado.com.br/public_html/zzz-real.txt; echo '=LS WEBROOT='; ls /domains/autogrado.com.br/public_html/; bye" 2>&1 || true
+      - name: Baixar arquivos do repositorio
+        uses: actions/checkout@v4
+
+      - name: Enviar por FTP para o Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          protocol: ftps
+          server-dir: /domains/autogrado.com.br/public_html/
+          local-dir: ./
+          dangerous-clean-slate: true
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            README.md
+            .gitignore
+            LEIA-ME*.txt
