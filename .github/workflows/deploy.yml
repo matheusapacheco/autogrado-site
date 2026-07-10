@@ -12,12 +12,11 @@ jobs:
       - name: Instalar lftp
         run: sudo apt-get update -qq && sudo apt-get install -y lftp -qq
 
-      - name: Teste de webroot (marcadores)
+      - name: Conferir marcadores
         env:
           H: ${{ secrets.FTP_HOST }}
           U: ${{ secrets.FTP_USERNAME }}
           P: ${{ secrets.FTP_PASSWORD }}
           PT: ${{ secrets.FTP_PORT }}
         run: |
-          printf 'RAIZ' > raiz.txt; printf 'DOMAINS' > domains.txt; printf 'PUB' > pub.txt
-          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:timeout 15; set net:max-retries 2; put raiz.txt -o zzz-raiz.txt; put domains.txt -o domains/autogrado.com.br/public_html/zzz-domains.txt; put pub.txt -o public_html/zzz-pub.txt; bye" 2>&1 || true
+          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:timeout 15; echo '=== raiz ==='; ls; echo '=== domains/autogrado.com.br/public_html ==='; ls domains/autogrado.com.br/public_html/; bye" 2>&1 || true
