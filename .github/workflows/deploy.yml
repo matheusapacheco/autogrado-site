@@ -9,17 +9,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Comparar servidor do FTP x do dominio
+      - name: Comparar IPv4 do FTP x do dominio
         env:
           H: ${{ secrets.FTP_HOST }}
         run: |
-          DOMAIN_IP=$(getent hosts autogrado.com.br | awk '{print $1}' | head -1)
-          FTP_IP=$(getent hosts "$H" | awk '{print $1}' | head -1)
-          [ -z "$FTP_IP" ] && FTP_IP="$H"
-          echo "IP do dominio autogrado.com.br: $DOMAIN_IP"
-          echo "IP do FTP resolvido:            $FTP_IP"
-          if [ "$FTP_IP" = "$DOMAIN_IP" ]; then
-            echo "RESULTADO: MESMO servidor (problema e de caminho/config)"
+          DOM_V4=$(getent ahostsv4 autogrado.com.br | awk '{print $1}' | head -1)
+          FTP_V4=$(getent ahostsv4 "$H" | awk '{print $1}' | head -1)
+          [ -z "$FTP_V4" ] && FTP_V4="$H"
+          echo "IPv4 do dominio: $DOM_V4"
+          echo "IPv4 do FTP:     $FTP_V4"
+          if [ "$DOM_V4" = "$FTP_V4" ]; then
+            echo "RESULTADO: MESMO servidor"
           else
-            echo "RESULTADO: SERVIDORES DIFERENTES (a conta FTP nao e a que serve o site)"
+            echo "RESULTADO: DIFERENTES"
           fi
