@@ -9,17 +9,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Comparar IPv4 do FTP x do dominio
+      - name: Instalar lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y lftp -qq
+      - name: Explorar acima do login
         env:
           H: ${{ secrets.FTP_HOST }}
+          U: ${{ secrets.FTP_USERNAME }}
+          P: ${{ secrets.FTP_PASSWORD }}
+          PT: ${{ secrets.FTP_PORT }}
         run: |
-          DOM_V4=$(getent ahostsv4 autogrado.com.br | awk '{print $1}' | head -1)
-          FTP_V4=$(getent ahostsv4 "$H" | awk '{print $1}' | head -1)
-          [ -z "$FTP_V4" ] && FTP_V4="$H"
-          echo "IPv4 do dominio: $DOM_V4"
-          echo "IPv4 do FTP:     $FTP_V4"
-          if [ "$DOM_V4" = "$FTP_V4" ]; then
-            echo "RESULTADO: MESMO servidor"
-          else
-            echo "RESULTADO: DIFERENTES"
-          fi
+          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:timeout 15; echo '=PWD='; quote PWD; echo '=SOBE 1 (cd ..)='; cd ..; quote PWD; ls; echo '=SOBE 2 (cd ../..)='; cd ..; quote PWD; ls; bye" 2>&1 || true
