@@ -12,11 +12,13 @@ jobs:
       - name: Instalar lftp
         run: sudo apt-get update -qq && sudo apt-get install -y lftp -qq
 
-      - name: Conferir marcadores
+      - name: Descobrir webroot
         env:
           H: ${{ secrets.FTP_HOST }}
           U: ${{ secrets.FTP_USERNAME }}
           P: ${{ secrets.FTP_PASSWORD }}
           PT: ${{ secrets.FTP_PORT }}
+          SD: ${{ secrets.FTP_SERVER_DIR }}
         run: |
-          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:timeout 15; echo '=== raiz ==='; ls; echo '=== domains/autogrado.com.br/public_html ==='; ls domains/autogrado.com.br/public_html/; bye" 2>&1 || true
+          printf 'SDTEST' > x.txt
+          lftp -p "$PT" -u "$U","$P" "$H" -e "set ssl:verify-certificate no; set ftp:ssl-force true; set ftp:ssl-protect-data true; set net:timeout 15; echo '=== onde o FTP cai (PWD) ==='; quote PWD; echo '=== secret SD conteudo ==='; ls \"$SD\" 2>&1 | head -20; echo '=== put marcador no SD ==='; put x.txt -o \"$SD/zzz-sd.txt\" 2>&1; echo '=== ls files/ ==='; ls files/ 2>&1 | head; echo '=== ls files/public_html/ ==='; ls files/public_html/ 2>&1 | head; bye" 2>&1 || true
