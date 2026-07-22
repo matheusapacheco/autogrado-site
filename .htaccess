@@ -37,5 +37,10 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
   ExpiresByType application/javascript "access plus 1 year"
 </IfModule>
 
+# --- HSTS: forca o navegador a usar sempre HTTPS ---
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
 # --- Seguranca basica: nao listar o conteudo das pastas ---
 Options -Indexes
